@@ -601,6 +601,7 @@ html, body { overflow: hidden; height: 100%; }
   .main #main_feature .feature_list ul li .ani_box { max-width: 100%; margin-bottom: 40rem; }
   .main #main_feature .feature_list ul li .txt_box { padding-bottom: 17rem; border-bottom: 1px solid #863B32; }
   .main #main_feature .feature_list ul li .txt_box .tit { font-size: 30rem; margin-bottom: 10rem; }
+  .main #main_feature .feature_list ul li .txt_box .tit span{ display:inline-block;}
   .main #main_feature .feature_list ul li .txt_box .info { font-size: 14rem; }
   .main #main_feature .feature_list ul li .txt_box br { display: none; }
   .main #main_feature .feature_list ul li.interaction .ani_box span { width: 100rem; height: 100rem; }
