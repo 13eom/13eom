@@ -1,0 +1,445 @@
+<?php include_once $_SERVER['DOCUMENT_ROOT']."/common/include/header.php"; ?>
+<script type="text/javascript" src="/common/js/main.js"></script>
+<link rel="stylesheet" href="/common/css/main.css">
+</head>
+<body>
+		
+	<!-- wrap -->
+	<div id="wrap" class="main">
+		<?php include_once $_SERVER['DOCUMENT_ROOT']."/common/include/top.php"; ?>
+		
+		<!-- PORTFOLIO VIEW POPUP -->
+		<div id="pf_view">
+			<div class="view_popup p_center">
+				<svg viewBox="0 0 1060 678" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<rect x="0.5" y="0.658447" width="1059" height="676" rx="29.5" stroke="#FF682C"/>
+				</svg>
+				<a href="" target="_blank" class="inner" id="pf_link">
+					<div class="btn_deco">
+						<i></i><i></i><i></i>
+					</div>
+					<div class="txt_box">
+						<ul>
+							<li class="name">
+								<span>Name</span> <p id="pf_name"></p>
+							</li>
+							<li class="date half">
+								<span>Date</span> <p id="pf_date"></p>
+							</li>
+							<li class="awards half">
+								<span>Awards</span> <p id="pf_awards"></p>
+							</li>
+							<li class="contribution half">
+								<span>Contribution</span> <p id="pf_ctrbt"></p>
+							</li>
+							<li class="period half">
+								<span>Period</span> <p id="pf_period"></p>
+							</li>
+							<li class="details">
+								<span>Work details</span> <p id="pf_details"></p>
+							</li>
+							<li class="about">
+								<span>About</span> <p id="pf_about"></p>
+							</li>
+						</ul>
+					</div>
+					<!-- <div class="link_btn">Click to visit website</div> -->
+				</a>
+			</div>
+			<a class="dim cover close"></a>
+		</div>
+
+		<!------ INTRO ------->
+		<div id="intro" class="vh100">
+			<div class="con_box p_center">
+				<div class="circle_box">
+					<div class="inner">
+						<span class="bg cover"></span>
+						<div class="bird icon" data-color="401D19"></div>
+						<p class="count pt p_center">0</p>
+						<div class="headset icon">
+							<img src="/images/common/headset.svg" alt="">
+						</div>
+					</div>
+				</div>
+				<div class="sound_info">
+					<p><span>Music composed by myself is prepared. </span></p>
+					<p><span>Would you like to join my music? </span></p>
+				</div>
+			</div>
+			<div class="sound_btn_wrap cover">
+				<button class="sound_btn on"></button>
+				<button class="sound_btn off"></button>
+			</div>
+		</div>
+		<!----- //INTRO ------>
+
+		<div class="content">
+			<div id="main_visual" class="container vh100">
+				<div class="wave_line wave1" data-aos=""></div>
+				<div class="wave_line wave4" data-aos=""></div>
+				<div class="inner">
+					<div class="tit_box">
+						<div class="tit">
+							<h1 class="fx" data-aos=""><b><em>ingenious</em>, logical </b></h1>
+							<h1 class="fx" data-aos=""><b><span class="pt">free-flowing</span> with ideas, </b></h1>
+							<h1 class="fx" data-aos=""><b>his name is <em class="name">birdman</em>.</b></h1>
+						</div>
+						<a href="" data-aos="fade-up" data-aos-delay="300">
+							Tracking the flight
+							<div class="bird" data-color="EDD0C6"></div>
+						</a>
+					</div>
+					<p class="sub_txt" data-aos="fade-up" data-aos-offset="0">
+						Ventriloc développe des solutions <br>
+						innovantes centrées sur la donnée pour <br>
+						des humains responsables de prendre <br>
+						des décisions éclairées.
+					</p>
+				</div>
+			</div>
+
+			<div id="main_best_pf">
+				<div class="sticky_box vh100">
+					<div class="wave_line wave2 p_center"></div>
+					<div class="pf_box">
+						<div class="bird" data-color="863B33"></div>
+						<div class="inner">
+							<div class="tit_tag">
+								<div class="bpf_logo">
+									<p>birdman</p>
+									<img src="/images/common/logo.svg" alt="">
+								</div>
+								<span><i></i>best portfolio</span>
+							</div>
+
+							<div class="pf_con">
+								<div class="list_box">
+									<div class="txt">
+										<div class="tit">
+										<span class="pt">Specially selected </span>
+											portfolio
+										</div>
+										<p>I have carefully selected projects that show off my skills.</p>
+									</div>
+									<div class="list">
+										<strong class="pt">Portfolio list</strong>
+										<ul></ul>
+									</div>
+								</div>
+								<div class="info_box">
+									<ul class="info_list pre">
+										<li class="date">
+											<div class="amount">
+												<span>date worked</span>
+												<p>23.05.11</p>
+											</div>
+											<div class="detail">
+												<p>period : 7days</p>
+											</div>
+										</li>
+										<li class="contribution">
+											<div class="amount">
+												<span>contribution</span>
+												<p>92%</p>
+											</div>
+											<div class="detail">
+												<p>all my work</p>
+											</div>
+										</li>
+										<li class="awards">
+											<div class="amount">
+												<span>awards</span>
+												<p></p>
+											</div>
+											<div class="detail"></div>
+										</li>
+									</ul>
+									<a class="view_box" href="" target="_blank">
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="main_feature">
+				<span class="main_cate container">Feature</span>
+				<div class="feature_tit" data-aos="">
+					<div class="wave_line wave5" ></div>
+					<div class="tit_box">
+						<p><span>Neat,</span></p>
+						<p><span><em>dynamic </em>and memorable,</span></p>
+						<p><span>and <em class="pt">Perfect.</em></span></p>
+					</div>
+				</div>
+				<div class="feature_list container">
+					<ul>
+						<li class="logical" data-aos="fade-up">
+							<div class="inner">
+								<div class="ani_box">
+									<svg xmlns="http://www.w3.org/2000/svg" width="250" height="247" viewBox="0 0 250 247" fill="none">
+										<mask id="path-1-inside-1_1002_202" fill="white">
+										<path d="M0.5 0.328125H197.484V197.312H0.5V0.328125Z"/>
+										</mask>
+										<path d="M0.5 0.328125V-0.671875H-0.5V0.328125H0.5ZM0.5 1.32812H197.484V-0.671875H0.5V1.32812ZM1.5 197.312V0.328125H-0.5V197.312H1.5Z" fill="#FF682C" mask="url(#path-1-inside-1_1002_202)"/>
+										<path d="M200 196.812H248.998C248.731 223.753 226.941 245.543 200 245.809V196.812Z" fill="#FF682C" stroke="#FF682C" />
+										<rect x="50" y="98.8118" width="49" height="49" stroke="#FF682C"/>
+										<rect x="147.982" y="0.828125" width="49" height="49" fill="#FF682C" fill-opacity="0.25" stroke="#FF682C" class="ani_op"/>
+										<rect x="98.9954" y="98.8118" width="49" height="49" fill="#FF682C" fill-opacity="0.26" stroke="#FF682C"/>
+										<rect x="50" y="49.823" width="49" height="49" fill="#FF682C" stroke="#FF682C" class="ani_op du5"/>
+										<rect x="1" y="147.812" width="49" height="49" stroke="#FF682C"/>
+									</svg>
+								</div>									
+								<div class="txt_box pt">
+									<p class="tit"><span class="pre">A clean and logical</span>website</p>
+									<p class="info">Minimize unnecessary tags and design the layout to <br>facilitate follow-up management.</p>
+								</div>
+							</div>
+						</li>
+						<li class="interaction" data-aos="fade-up" data-aos-delay="100">
+							<div class="inner">
+								<div class="ani_box">
+									<i></i>
+									<span class="red"></span>
+									<span class="yel"></span>
+								</div>
+								<div class="txt_box pt">
+									<p class="tit"><span class="pre">Flashy, but not messy </span>animations</p>
+									<p class="info">Elevate your website with smooth, <br>luxurious animations.</p>
+								</div>
+							</div>
+						</li>
+						<li class="attention" data-aos="fade-up" data-aos-delay="200">
+							<div class="inner">
+								<div class="ani_box">
+									<div class="dot">
+										<i></i><i></i><i></i><i></i>
+										<i></i><i></i><i></i><i></i>
+										<i></i><i></i><i></i><i></i>
+										<i></i><i></i><i></i><i></i>
+									</div>
+									<div class="circle">
+										<i></i><i></i><i></i>
+									</div>
+								</div>
+								<div class="txt_box pt">
+									<p class="tit"><span class="pre">Give it a proper point and </span>draw attention</p>
+									<p class="info">Maximize the synchro rate in the design and <br>reflect the customer's needs.</p>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div id="main_skills" data-aos="">
+				<span class="main_cate container">Skills</span>
+				<div class="wave">
+					<ul>
+						<li data-aos="fade-up">HTML</li>
+						<li data-aos="fade-up" data-aos-delay="100">CSS</li>
+						<li data-aos="fade-up" data-aos-delay="200">JAVASCRIPT</li>
+						<li data-aos="fade-up" data-aos-delay="300">PHP</li>
+						<li data-aos="fade-up" data-aos-delay="400">REACT</li>
+						<li data-aos="fade-up" data-aos-delay="500">FIGMA</li>
+						<li data-aos="fade-up" data-aos-delay="600">ZAPLIN</li>
+						<li data-aos="fade-up" data-aos-delay="700">JQUERY</li>
+						<li data-aos="fade-up" data-aos-delay="800">SWIPER</li>
+						<li data-aos="fade-up" data-aos-delay="900">GSAP</li>
+					</ul>
+				</div>
+			</div>
+
+			<div id="main_value" data-aos="">
+				<div class="value_box">
+					<div class="inner">
+						<div class="tit_box">
+							<div class="bird" data-color="FF682C"></div>
+							<p class="tit" data-aos="fade-up">
+								<em>Birdman's</em> idea <br>
+								never stops gliding.
+							</p>
+						</div>
+						<div class="info_box flex_sb top" data-aos="">
+							<span data-aos="fade-up">Birdman is</span>
+							<p data-aos="fade-up" data-aos-delay="100">
+								<i></i> Ideas are flying in my head all the time, <br>how to more code more efficiently, how to make <br>better awesome animations, how to more build <br>cleaner layouts. and find the answer.
+							</p>
+						</div>
+					</div>						
+				</div>
+			</div>
+
+			<div id="main_all_pf" data-aos="">
+				<div class="bg cover tcX">
+					<div class="sticky_box vh100">
+						<p class="info container">
+							Click on the project name to go to that site. <br>
+							All projects with bold text are <br>
+							100% my own work.
+						</p>
+					</div>
+				</div>
+				<div class="sticky_box vh100">
+					<span class="main_cate container">All portfolio</span>
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none">
+						<defs>
+							<clipPath id="clip_bird">
+								<path d="M153.209 57.2071C132.008 138.887 151.365 153.248 214.966 103.881L240.775 83.237L218.653 42.8458C186.392 -17.2923 171.644 -14.5995 153.209 57.2071Z" fill="#502521"></path>
+								<path d="M295.159 78.7487C238.01 118.242 181.783 153.248 170.722 155.941C158.739 158.634 137.539 153.248 119.104 142.477C75.7812 116.447 42.598 118.242 19.5541 146.965C8.49306 160.429 0.197266 178.38 0.197266 188.254C0.197266 202.615 4.80604 204.41 30.6152 199.922C66.5637 192.742 84.077 208.898 99.7468 263.651C114.495 313.018 131.087 324.686 184.548 323.789C221.419 322.891 230.636 326.481 238.01 342.638C242.619 353.409 258.289 367.77 272.115 374.951C294.237 386.62 299.768 385.722 330.186 370.463C368.899 349.819 390.1 313.915 381.804 281.602C377.195 262.753 371.665 260.06 335.716 260.958C282.254 260.958 262.898 244.801 308.064 236.723C352.308 228.645 392.865 185.561 410.378 130.808C427.892 72.4656 428.814 6.94206 412.222 6.94206C405.77 6.94206 353.23 39.255 295.159 78.7487Z" fill="#502521"></path>
+							</clipPath>
+						</defs>
+					</svg>
+					<div class="bird_progress p_center">
+						<i></i><i></i><i></i>
+					</div>
+					<div class="year p_center pt">
+						<p>
+							<i>M</i>
+							<i>Y</i>
+							<i>&nbsp;</i>
+							<i>P</i>
+							<i>O</i>
+							<i>R</i>
+							<i>T</i>
+							<i>F</i>
+							<i>O</i>
+							<i>L</i>
+							<i>I</i>
+							<i>O</i>
+						</p>
+						<p><i>2</i><i>0</i><i>2</i><i>1</i></p>
+						<p><i>2</i><i>0</i><i>2</i><i>2</i></p>
+						<p><i>2</i><i>0</i><i>2</i><i>3</i></p>
+					</div>
+				</div>
+				<div class="pf_list_wrap">
+					<div class="pf_list y_2021 taR">
+						<ul class="tit_list container"></ul>
+					</div>
+					<div class="pf_list y_2022">
+						<ul class="tit_list container"></ul>
+					</div>
+					<div class="pf_list y_2023 taC">
+						<ul class="tit_list container"></ul>
+						<div class="window_box_wrap cover">
+							<div class="window_box vh100">
+								<div class="window_box_inner vh100">
+									<ul class="img_wrap p_center">
+										<li class="img2"><img src="/images/main/me2.jpg" alt=""></li>
+										<li class="img3"><img src="/images/main/me3.jpg" alt=""></li>
+										<li class="img4"><img src="/images/main/me4.jpg" alt=""></li>
+										<li class="img5"><img src="/images/main/me5.jpg" alt=""></li>
+										<li class="img1"><img src="/images/main/me6.jpg" alt=""></li>
+										<li class="img_center"><div class="inner"><img src="/images/main/me.jpg" alt=""></div></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="main_about" class="container">
+				<div class="tit_box">
+					<span class="main_cate" data-aos="fade-up">About me</span>
+					<p class="tit" data-aos="fade-up">
+						The sensuous, smart and versatile <br>
+						<em>Birdman</em>, who is he?
+					</p>
+				</div>
+
+				<ul class="about_list">
+					<li>
+						<svg viewBox="0 0 1361 527" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<rect x="1.19238" y="1.49219" width="1359" height="525" rx="14.5" stroke="#816729"/>
+						</svg>
+						<div class="inner">
+							<div class="txt_box">
+								<div class="cate_tit">
+									<span>Leeseungbeom</span>
+									<span>Dec 20, 1994</span>
+								</div>
+								<p class="info">I was born in Seoul, and I was born in 1994. I like watching movies & music, playing the piano, and making websites.</p>
+							</div>
+							<div class="img_box">
+								<img src="/images/main/beom.jpg" alt="">
+							</div>
+						</div>
+					</li>
+					<li>
+						<svg viewBox="0 0 1361 527" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<rect x="1.19238" y="1.49219" width="1359" height="525" rx="14.5" stroke="#816729"/>
+						</svg>
+						<div class="inner">
+							<div class="txt_box">
+								<div class="cate_tit">
+									<span>My history</span>
+									<span>Restaurant chef</span>
+								</div>
+								<p class="info">From the age of 25, I worked as a chef at a european restaurant in Jamsil for two years. I developed leadership while running the store and managing employees.</p>
+							</div>
+							<div class="img_box">
+								<img src="/images/main/piano.jpg" alt="">
+							</div>
+						</div>
+					</li>
+					<li>
+						<svg viewBox="0 0 1361 527" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<rect x="1.19238" y="1.49219" width="1359" height="525" rx="14.5" stroke="#816729"/>
+						</svg>
+						<div class="inner">
+						<div class="txt_box">
+							<div class="cate_tit">
+								<span>My history</span>
+								<span>Composer</span>
+							</div>
+							<p class="info">Since I was young, I have been playing the piano and composing as a hobby, and have released many pieces of music so far.</p>
+						</div>
+						<div class="img_box">
+							<img src="/images/main/composer.jpg" alt="">
+						</div>
+						</div>
+					</li>
+					<li>
+						<svg width="1361" height="527" viewBox="0 0 1361 527" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<rect x="1.19238" y="1.49219" width="1359" height="525" rx="14.5" stroke="#816729"/>
+						</svg>
+						<div class="inner">
+						<div class="txt_box">
+							<div class="cate_tit">
+								<span>My history</span>
+								<span>Web markup developer</span>
+							</div>
+							<p class="info">Now, I have become a versatile web markup developer who can create beautiful, high-quality websites.</p>
+						</div>
+						<div class="img_box">
+							<img src="/images/main/developer.jpg" alt="">
+						</div>
+						</div>
+					</li>
+				</ul>
+				<div class="sticky_box cross container">
+					<img src="/images/common/cross.svg" alt="">
+				</div>
+			</div>
+
+			<div id="main_contact" class="container" data-aos="">
+				<svg  viewBox="0 0 1361 442" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<rect x="1.19238" y="1.49219" width="1359" height="440" rx="14.5" stroke="#816729"/>
+				</svg>
+				<div class="contact_box p_center">
+					<p><span>Birdman's flight <em>never stops</em>. </span></p>
+					<p><span><em>Click the</em> <a href=""><i>Contact me</i></a> to <em>catch</em> Birdman.</span></p>
+					<p><span>Thank you for visiting.</span></p>
+				</div>
+			</div>
+		</div>
+		<!-- container -->
+		<?php include_once $_SERVER['DOCUMENT_ROOT']."/common/include/footer.php"; ?>
+	</div>
+	<!-- //wrap -->
+</body>
+</html>

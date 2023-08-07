@@ -1,0 +1,312 @@
+@import 'var';
+
+/*************** PUBLIC ***************/
+::-webkit-scrollbar{ display:none;}
+::selection{background-color: $ci; color: $text;}
+
+/* LAYOUT */
+.container{ width: 100%; height: 100%; position: relative; padding-left: 100rem !important; padding-right: 100rem !important;}
+.inner{ width: 100%; height: 100%; position: relative;}
+.flex_sb{ display: flex; justify-content: space-between; align-items: center;
+	&.top{align-items: flex-start;}
+	&.btm{align-items: flex-end;}
+}
+.p_center{ position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);}
+.f_center{ display: flex; align-items: center; justify-content: center;}
+
+/* TEXT */
+strong{ font-weight: 500;}
+em{ color: $ci; font-family: 'PT Serif', sans-serif;}
+.stroke{ color: transparent; -webkit-text-stroke: 1px $ci;}
+.vh100{height: 100vh; height: calc(var(--vh, 1vh) * 100);}
+
+/* BG용 IMG : 이미지태그를 배경으로 쓸때 쓰임 */
+.cover{ width: 100%; height: 100%; position: absolute; left: 0; top: 0; right: 0; bottom: 0; object-fit: cover;}
+
+/* rotate 애니메이션 */
+.rotate{ animation: rotate 20s linear infinite;}
+@keyframes rotate{
+	0%{ transform: rotate(0deg);}
+	100%{ transform: rotate(360deg);}
+}
+
+/* [ ● TXTXTXTXTXT ] 형태 텍스트 & 레이아웃 */
+.dotTxt, .dotList > li{ position: relative; padding-left: 18rem;}
+.dotTxt::before, .dotList > li::before{ content: '•'; display: block; position: absolute; left: 0; top:0;}
+
+/* 팝업 
+-----------------------------------
+<div class="pop_wrap">
+	<div class="popup">
+		<div class="close pop_btn">close</div>
+		<div>컨텐츠 박스</div>
+	</div>
+	<div class="dim pop_btn"></div>
+</div>
+------------------------------------ 
+BODY 최상단에 삽입하세요.
+*/
+.pop_wrap{ width: 100%; height: 100vh; position: fixed; left: 0; top: 0; right: 0; bottom: 0; opacity: 0; transition: .5s ease; pointer-events: none; touch-action: none; z-index: 9999;
+	.pop_btn{ cursor: pointer;}
+	.popup{ max-width: calc( 100% - 40rem); max-height: calc(100% - 40rem); position: absolute; left: 50%; top: 70%; transform: translate(-50%, -50%); background-color: $white; z-index: 5; transition: 1s ease; padding: 80rem;  opacity: 0;
+		.close{ position: absolute; right: 30rem; top: 30rem;}
+	}
+	.dim{ width: 100%; height: 100%; position: absolute; background-color: rgba(0, 0, 0, .5); opacity: 0; transition: .3s ease;}
+
+	&.on{ opacity: 1; pointer-events: auto; touch-action: auto;
+		.popup{ top: 50%; opacity: 1;}
+		.dim{ opacity: 1;}
+	}
+}
+
+/* WAVE */
+.wave{ width: 100%; display: flex; overflow: hidden; 
+	> *{ flex-shrink: 0; animation: wave 70s linear infinite;
+		+ *{ margin-left: 20rem;}
+	}
+	@keyframes wave {
+		0%{ transform: translateX(0);}
+		100%{ transform: translateX(-100%);}
+	}
+
+	&.reverse > *{ animation-direction: reverse;}
+}
+
+/* TEXT EFEECT */
+.fx{ display: block; overflow: hidden;
+	b{ display: block; transform: translateY(130%); transition: 1s cubic-bezier(0.25, 1, 0.5, 1);}
+	@for $i from 1 to 11{
+		&:nth-child(#{$i+1}) b{
+			transition-delay:($i * .1s);
+		}
+	}	
+}
+.aos-animate > .fx b,
+.aos-animate.fx b,
+.swiper-slide-active .fx b{ transform: translateY(0);}
+
+/* ETC */
+.wImg{ filter: brightness(0) invert(1);}/* 이미지 하얀색으로 만들기*/
+.bImg{ filter: brightness(0);}/* 이미지 검정색으로 만들기 */
+.tcX{ touch-action: none; pointer-events: none;}
+.remImg{ display: none;}
+
+/* LOGO */
+.logo{ width: max-content; font-size: 50rem; color: $ci; position: relative;
+	&::before{ content: 'birdman'; display: block; font-weight: 400;}
+	&::after{ content: ''; display: block; width: 10%; height: 100%; background: url(/images/common/logo.svg)no-repeat center top / 100% auto; position: absolute; left: 102%; top: 0;}
+}
+
+/* WAVE LINE */
+.wave_line{ position: absolute; width: 100%; overflow: hidden;
+	svg{ position: relative; width: 100%; transition: 3s cubic-bezier(0.83, 0, 0.17, 1);
+		*{ stroke: $bg4;}
+		+ svg{ position: absolute; left: 0; top: 0; animation: wave_line 5s linear 1.3s infinite; clip-path: polygon(0 0, 0 0, 0 100%, 0 100%); opacity: 0; transition: 1s ease 1.2s;
+			*{stroke: $ci;}
+		}
+
+		&:first-child{stroke-dasharray: 2640; stroke-dashoffset: 2640;}
+	}
+	&.aos-animate svg,
+	&.on svg{
+		&:first-child{ stroke-dashoffset: 0;}
+		+ svg{ opacity: 1;}
+	}
+
+	@keyframes wave_line {
+		0%{ clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);}
+		50%{ clip-path: polygon(50% 0, 65% 0, 65% 100%, 50% 100%);}
+		100%{ clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);}
+	}
+}
+
+/* CURSOR */
+.cursor{ display: flex; align-items: center; justify-content: center; position: fixed; background-color: $ci; width: 80rem; height: 80rem; border-radius: 50%; transition:.5s ease,1s $ease_out_back transform, .2s ease left, .2s ease top; user-select: none; pointer-events: none; z-index: 999999; transform: translate(-50%, -50%) scale(.2); }
+.cursor.on{ transform: translate(-50%, -50%) scale(1); background-color: rgba($color: #ff682c, $alpha: .3);} 
+
+.audio_list{ opacity: 0; overflow: hidden; width: 1px; height: 1px; position: absolute; left: 0; top:0; }
+
+/*************** HEADER ***************/
+header{ width: 100%; position: fixed; left: 0; top: 0; z-index: 999; transition: 1s $ease_out; transform: translateY(-100%); padding: 41rem 0;font-weight: 300;
+	&.load, &.nav-up{ transform: translateY(0);}
+	&.nav-down{ transform: translateY(-100%);}
+	.container{ display: flex; justify-content: space-between; align-items: center;
+		#gnb{ position: absolute; left: 50%; transform: translateX(-50%); color: $ci;
+			> ul{ display: flex; align-items: center;
+				> li{position: relative; text-align: center; margin: 0 25rem;
+					&.dep2::before{ content: ''; display: block; width: 10rem; height: 10rem; background: url(/images/common/arrow.svg)no-repeat center center / contain; position: absolute; right: -17rem; top: 0; transition: .5s ease;}
+					> a{ position: relative; overflow: hidden; height: 20rem;
+						span{ display: block; transition: .5s ease; text-align: center; height: 100%; line-height: 20rem; padding: 0 3rem;
+							+ span{font-weight: 500;}
+						}
+					}
+					ul{ position: absolute; left: -20rem; top: 0; padding: 60rem 20rem 1rem; transition: .3s ease; touch-action: none; pointer-events: none; overflow: hidden; text-align: left;
+						&::before{ content: ''; display: block; width: 1px; height: 0; background-color: $ci; position: absolute; left: 0; top: 0; transition: 1s $ease_out;}
+						li{ white-space: nowrap; opacity: 1; transform: translateX(-50rem); opacity: 0; transition: 1s $ease_out;
+							+ li{ margin-top: 20rem;}
+						}
+					}
+					&:hover{
+						&::before{ transform: rotate(180deg);}
+						a span{ transform: translateY(-100%);}
+						ul{ touch-action: auto; pointer-events: auto;
+							&::before{ height: 100%;}
+							li{ transform: translateX(0); opacity: 1; transition-delay: .2s;
+								@for $i from 1 to 10{
+									&:nth-child(#{$i+1}){
+										transition-delay:.1s * $i+.2;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.bgm_btn{ width: 142rem; padding: 10rem; text-align: center; background-color: $bg4; border-radius: 999rem; overflow: hidden; position: relative;
+			&::before{ content: 'click to pause'; position: relative; z-index: 1;}
+			&::after{ content: ''; width: 150%; height: 200%; position: absolute; left: 50%; top:100%; transform: translateX(-50%); background-color: $ci; border-radius: 50% 50% 0 0; transition: .5s ease;}
+			&:hover::after{top: -100%;}
+			.sound_btn{ z-index: 2;}
+			&.on{
+				&::before{ content: 'click to play';}
+				.sound_btn.off{ display: none;}
+			}
+		}
+	}
+}
+
+
+/*************** FOOTER ***************/
+.ft_blank{ width: 100%; opacity: 0;}
+footer{width: 100%; position: fixed; left: 0; bottom: 0; padding: 60rem 0; overflow: hidden; background-color: $bg1; transform: translateY(50%);
+	svg.logo{ width: 645rem; height: 581rem; position: absolute; right: 60rem; top: -90rem;}
+	.container{
+		a.logo{ margin-bottom: 316rem;}
+		.ft_menu{ display: flex; color: $ci; line-height: 1; font-weight: 200;
+			> li{ display: flex; flex-direction: column; margin-right: 136rem;
+				&:nth-child(3),
+				&:nth-child(4){ justify-content: flex-end;}
+				ul li + li{ margin-top: 17rem;}
+			}
+		}
+		.resume{ position: absolute; right: 0; bottom: 0;
+			p{ line-height: 1.2;}
+			.down_btn{ display: flex; align-items: center; margin-top: 18rem; font-size: 14rem;
+				span{ background: url(/images/common/arrow_btn.svg)no-repeat right center / auto 90%; padding-right: 20rem; margin-right: 20rem;
+				}
+				a{ text-decoration: underline;
+					+a{ margin-left: 12rem;}
+				}
+			}
+		}
+	}
+}
+
+
+@media screen and ( min-width:1281px){
+	.mo{ display: none !important;}
+}
+
+@media screen and ( max-width:1280px){
+	.pc{ display: none !important;}
+	.container{padding-left: 20rem !important; padding-right: 20rem !important;}
+	.dotTxt, .dotList > li{ padding-left: 8rem;}
+	.dotTxt::before, .dotList > li::before{ top: 10rem; width: 4rem; height: 4rem;}
+	.logo{ font-size: 23rem;}
+
+	/*************** HEADER ***************/
+	header{ padding: 20rem 0;
+		.logo{ z-index: 2;}
+		.container{
+			#gnb{ left: 0; top: -20px; transform: translateY(-100%); padding-top: 80rem; background-color: $bg1; width: 100%; height: 100vh; transition: 1s $ease-out; overflow: hidden;
+				> ul{ display: block; z-index: 1; position: relative;
+					> li{position: relative; text-align: center; margin: 0; padding: 12rem 20rem; background-color: $bg1;
+						&::after{ content: ''; width: 100%; height: 1px; background-color: $text; position: absolute; left: 0; bottom: 0;}
+						&.dep2::before{width: 12rem; height: 12rem; right: 20rem; top: 16rem;}
+						> a{ height: 20rem;
+							span{text-align: left;}
+						}
+						ul{ position: relative; left: 4rem; padding:0 15rem; margin: 0; max-height: 0;
+							&::before{ background-color: $bg2;}
+							li + li{ margin-top: 10rem;}
+						}
+						&:hover{
+							ul{ max-height: 300rem; padding: 6rem 15rem; margin: 15rem 0 10rem;}
+						}
+					}
+				}
+				.bird{ position: absolute; width: 100%; left: 20rem; bottom: 0; transform: translateY(400rem); opacity: 0; transition: 1s $ease-out;}
+			}
+
+			.btn_wrap{ display: flex; align-items: center; position: relative; z-index: 2;
+				.bgm_btn{ width:60rem; height: 30rem; padding: 9rem; font-size: 12rem; margin-right: 20rem;
+					&::before{ content: 'pause';}
+					&::after{ display: none;}
+					&.on{
+						&::before{ content: 'play';}
+						.sound_btn.off{ display: none;}
+					}
+				}
+				.all_menu_btn{ width: 24rem; height: 16rem; cursor: pointer; position: relative;
+					span{ width: 100%; height: 1px; background-color: $bg4; position: absolute; overflow: hidden; transform-origin: center center; transition: 1s $ease-out; left: 0; top: 0;
+						&::before{ content: ''; display: block; position: absolute; left: 0; top: 0; height: 100%; right: 100%; background-color: $ci; animation: all_menu 2s $ease infinite;}
+						&:nth-child(2){ top: 49%; transition-duration: 1.3s; transform-origin: left center;
+							&::before{ animation-delay: .3s;}
+						}
+						&:nth-child(3){ top: 100%; transition-duration: 1.6s;
+							&::before{ animation-delay: .6s;}
+						}
+						@keyframes all_menu {
+							0%{ left: 0; right: 100%;}
+							50%{ right: 0%;}
+							100%{ left: 100%; right: 0;}
+						}
+					}
+				}
+			}
+		}
+
+		&.on{
+			&.nav-down{ transform: translateY(0%);}
+			.container{
+				.btn_wrap .all_menu_btn{
+					span{ 
+						&:first-child{ transform: translate(-50%,-50%) rotate(45deg); top: 50%; left: 50%;}
+						&:nth-child(2){ transform: scaleX(0);}
+						&:last-child{ transform: translate(-50%,-50%) rotate(-45deg); top: 50%; left: 50%;}
+					}
+				}
+				#gnb{ transform: translateY(0);
+					.bird{ opacity: 1; transform: translateY(60rem);}
+				}
+			}
+		}
+	}
+
+	/*************** FOOTER ***************/
+	footer{ padding: 20rem 0 0; 
+		svg.logo{ width: 90%; height: 80vw; right: -7%; top: 20rem;}
+		.container{
+			a.logo{ margin-bottom: calc(80vw + 40rem);}
+			.ft_menu{ color: $bg2; margin-left: -20rem; width: calc(100% + 40rem); background-color: $ci; padding: 30rem 20rem 20rem; flex-wrap: wrap; font-size: 14rem; 
+				> li{ display: flex; flex-direction: column; margin-right:0; width: 100%;
+					&:nth-child(3),
+					&:nth-child(4){ width: 50%; border-top: 1px solid $bg2; padding-top: 30rem; margin-top: 20rem;
+						a{ text-align: right;}
+					}
+					ul li + li{ margin-top: 17rem;}
+				}
+			}
+			.resume{ bottom: 85rem;
+				.down_btn{ display: block; margin-top: 0; text-align: right; filter: brightness(0) invert(1) opacity(.7); font-weight: 100;
+					span{ display: block; margin-right: 0; padding-right: 15rem; margin-bottom: 7rem;}
+					a{ display: inline-block; text-decoration: underline;
+						+a{ margin-left: 5rem;}
+					}
+				}
+			}
+		}
+	}
+}
