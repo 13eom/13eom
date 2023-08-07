@@ -63,7 +63,7 @@ $(function(){
 	var pf_list_w = pf_list.children('ul.tit_list');
 
 	$.ajax({
-		url : "../common/ajax/project.json",
+		url : "../ajax/project.json",
 		type : "get",
 		dataType: "json",
 		success : function(data) {
