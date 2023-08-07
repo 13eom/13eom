@@ -126,7 +126,7 @@ BODY 최상단에 삽입하세요.
 
 .logo::before { content: 'birdman'; display: block; font-weight: 400; }
 
-.logo::after { content: ''; display: block; width: 10%; height: 100%; background: url(/images/common/logo.svg) no-repeat center top/100% auto; position: absolute; left: 102%; top: 0; }
+.logo::after { content: ''; display: block; width: 10%; height: 100%; background: url(../../images/common/logo.svg) no-repeat center top/100% auto; position: absolute; left: 102%; top: 0; }
 
 /* WAVE LINE */
 .wave_line { position: absolute; width: 100%; overflow: hidden; }
@@ -171,7 +171,7 @@ header .container #gnb > ul { display: flex; align-items: center; }
 
 header .container #gnb > ul > li { position: relative; text-align: center; margin: 0 25rem; }
 
-header .container #gnb > ul > li.dep2::before { content: ''; display: block; width: 10rem; height: 10rem; background: url(/images/common/arrow.svg) no-repeat center center/contain; position: absolute; right: -17rem; top: 0; transition: .5s ease; }
+header .container #gnb > ul > li.dep2::before { content: ''; display: block; width: 10rem; height: 10rem; background: url(../../images/common/arrow.svg) no-repeat center center/contain; position: absolute; right: -17rem; top: 0; transition: .5s ease; }
 
 header .container #gnb > ul > li > a { position: relative; overflow: hidden; height: 20rem; }
 
@@ -252,7 +252,7 @@ footer .container .resume p { line-height: 1.2; }
 
 footer .container .resume .down_btn { display: flex; align-items: center; margin-top: 18rem; font-size: 14rem; }
 
-footer .container .resume .down_btn span { background: url(/images/common/arrow_btn.svg) no-repeat right center/auto 90%; padding-right: 20rem; margin-right: 20rem; }
+footer .container .resume .down_btn span { background: url(../../images/common/arrow_btn.svg) no-repeat right center/auto 90%; padding-right: 20rem; margin-right: 20rem; }
 
 footer .container .resume .down_btn a { text-decoration: underline; }
 

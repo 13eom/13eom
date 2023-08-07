@@ -94,7 +94,7 @@ BODY 최상단에 삽입하세요.
 /* LOGO */
 .logo{ width: max-content; font-size: 50rem; color: $ci; position: relative;
 	&::before{ content: 'birdman'; display: block; font-weight: 400;}
-	&::after{ content: ''; display: block; width: 10%; height: 100%; background: url(/images/common/logo.svg)no-repeat center top / 100% auto; position: absolute; left: 102%; top: 0;}
+	&::after{ content: ''; display: block; width: 10%; height: 100%; background: url(../../images/common/logo.svg)no-repeat center top / 100% auto; position: absolute; left: 102%; top: 0;}
 }
 
 /* WAVE LINE */
@@ -134,7 +134,7 @@ header{ width: 100%; position: fixed; left: 0; top: 0; z-index: 999; transition:
 		#gnb{ position: absolute; left: 50%; transform: translateX(-50%); color: $ci;
 			> ul{ display: flex; align-items: center;
 				> li{position: relative; text-align: center; margin: 0 25rem;
-					&.dep2::before{ content: ''; display: block; width: 10rem; height: 10rem; background: url(/images/common/arrow.svg)no-repeat center center / contain; position: absolute; right: -17rem; top: 0; transition: .5s ease;}
+					&.dep2::before{ content: ''; display: block; width: 10rem; height: 10rem; background: url(../../images/common/arrow.svg)no-repeat center center / contain; position: absolute; right: -17rem; top: 0; transition: .5s ease;}
 					> a{ position: relative; overflow: hidden; height: 20rem;
 						span{ display: block; transition: .5s ease; text-align: center; height: 100%; line-height: 20rem; padding: 0 3rem;
 							+ span{font-weight: 500;}
@@ -194,7 +194,7 @@ footer{width: 100%; position: fixed; left: 0; bottom: 0; padding: 60rem 0; overf
 		.resume{ position: absolute; right: 0; bottom: 0;
 			p{ line-height: 1.2;}
 			.down_btn{ display: flex; align-items: center; margin-top: 18rem; font-size: 14rem;
-				span{ background: url(/images/common/arrow_btn.svg)no-repeat right center / auto 90%; padding-right: 20rem; margin-right: 20rem;
+				span{ background: url(../../images/common/arrow_btn.svg)no-repeat right center / auto 90%; padding-right: 20rem; margin-right: 20rem;
 				}
 				a{ text-decoration: underline;
 					+a{ margin-left: 12rem;}
