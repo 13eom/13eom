@@ -16,9 +16,9 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollToPlugin.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@latest/bundled/lenis.js"></script>
-	<script type="text/javascript" src="./common/js/common.js"></script>
-	<script type="text/javascript" src="./common/js/main.js"></script>
-	<link rel="stylesheet" href="./common/css/main.css">
+	<script type="text/javascript" src="./common/js/common.js" defer></script>
+	<script type="text/javascript" src="./common/js/main.js" defer></script>
+	
 </head>
 <body>
 		
@@ -27,10 +27,10 @@
 		<div class="audio_list">
 			<audio src="./audio/main.wav" loop id="bgm"></audio>
 		</div>
-		<div class="cursor pc"></div>
+		
 		<header>
 			<div class="container">
-				<a href="" class="logo"></a>
+				<a href="./" class="logo"></a>
 				<div id="gnb">
 					<ul>
 						<li class="dep2">
@@ -48,24 +48,19 @@
 								<li><a href="./index.php#main_about">About me</a></li>
 							</ul>
 						</li>
-						<li class="dep2">
+						<li class="dep2 pf">
 							<a>
 								<span>portfolio</span>
 								<span>portfolio</span>
 							</a>
-							<ul>
-								<li><a href="">menu1</a></li>
-								<li><a href="">menu2</a></li>
-							</ul>
+							<ul></ul>
 						</li>
-						<li><a href="">
-							<span>skill</span>
-							<span>skill</span>
-						</a></li>
-						<li><a href="">
-							<span>contact</span>
-							<span>contact</span>
-						</a></li>
+						<li>
+							<a class="contact_btn">
+								<span>contact</span>
+								<span>contact</span>
+							</a>
+						</li>
 					</ul>
 					<div class="bird mo" data-color="863B32"></div>
 				</div>
@@ -82,6 +77,7 @@
 				</div>
 			</div>
 		</header>
+		<div class="cursor pc"></div>
 		
 		<!-- PORTFOLIO VIEW POPUP -->
 		<div id="pf_view">
@@ -123,6 +119,7 @@
 			</div>
 			<a class="dim cover close"></a>
 		</div>
+		<!-- //PORTFOLIO VIEW POPUP -->
 
 		<!------ INTRO ------->
 		<div id="intro" class="vh100">
@@ -148,8 +145,42 @@
 			</div>
 		</div>
 		<!----- //INTRO ------>
-
-		<div class="content">
+		
+		<!------ CONTACT ------->
+		<div id="contact">
+			<div class="container">
+				<div class="visual_tit">
+					<div class="inner">
+						<span class="cate">Contact</span>
+						<div class="tit">
+							<p class="fx"><b>What <em>more</em> are you</b></p>
+							<p class="fx"><b>looking for?</b></p>
+						</div>
+						<div class="bird" data-color="ff682c"></div>
+					</div>
+				</div>
+				<div class="contact_list">
+					<ul>
+						<li>
+							<span>tel</span>
+							<a href="tel:010-5059-9920">010 5059 9920</a>
+						</li>
+						<li>
+							<span>mail</span>
+							<a href="mailto:dltmdqja6563@gmail.com">dltmdqja6563@gmail.com</a>
+						</li>
+						<li>
+							<span>insta</span>
+							<a href="instagram.com/_13eom/" target="_blank">instagram/_13eom/</a>
+						</li>
+					</ul>
+					<button class="contact_btn">← Back</button>
+				</div>
+			</div>
+		</div>
+		<!------ //CONTACT ------->
+		
+		<div id="contents">
 			<div id="main_visual" class="container vh100">
 				<div class="wave_line wave1" data-aos=""></div>
 				<div class="wave_line wave4" data-aos=""></div>
@@ -231,6 +262,7 @@
 										</li>
 									</ul>
 									<a class="view_box" href="" target="_blank">
+										<video src="" muted loop class="best_pf_vid cover"></video>
 									</a>
 								</div>
 							</div>
@@ -268,7 +300,7 @@
 									</svg>
 								</div>									
 								<div class="txt_box pt">
-									<p class="tit"><span class="pre">A clean and logical</span> website</p>
+									<p class="tit"><span class="pre">A clean and logical</span>website</p>
 									<p class="info">Minimize unnecessary tags and design the layout to <br>facilitate follow-up management.</p>
 								</div>
 							</div>
@@ -281,7 +313,7 @@
 									<span class="yel"></span>
 								</div>
 								<div class="txt_box pt">
-									<p class="tit"><span class="pre">Flashy, but not messy</span> animations</p>
+									<p class="tit"><span class="pre">Flashy, but not messy </span>animations</p>
 									<p class="info">Elevate your website with smooth, <br>luxurious animations.</p>
 								</div>
 							</div>
@@ -300,7 +332,7 @@
 									</div>
 								</div>
 								<div class="txt_box pt">
-									<p class="tit"><span class="pre">Give it a proper point and</span> draw attention</p>
+									<p class="tit"><span class="pre">Give it a proper point and </span>draw attention</p>
 									<p class="info">Maximize the synchro rate in the design and <br>reflect the customer's needs.</p>
 								</div>
 							</div>
@@ -351,9 +383,9 @@
 				<div class="bg cover tcX">
 					<div class="sticky_box vh100">
 						<p class="info container">
+							This is a list of all my portfolios. <br>	
 							Click on the project name to go to that site. <br>
-							All projects with bold text are <br>
-							100% my own work.
+							<i></i> 100% my own work.
 						</p>
 					</div>
 				</div>
@@ -507,7 +539,7 @@
 				</svg>
 				<div class="contact_box p_center">
 					<p><span>Birdman's flight <em>never stops</em>. </span></p>
-					<p><span><em>Click the</em> <a href=""><i>Contact me</i></a> to <em>catch</em> Birdman.</span></p>
+					<p><span><em>Click the</em> <a class="contact_btn"><i>Contact me</i></a> to <em>catch</em> Birdman.</span></p>
 					<p><span>Thank you for visiting.</span></p>
 				</div>
 			</div>

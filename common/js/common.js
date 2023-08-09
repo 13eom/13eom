@@ -2,9 +2,9 @@
 let mvh = window.innerHeight * 0.01;
 document.documentElement.style.setProperty('--vh', `${mvh}px`);
 window.addEventListener('resize', () => {
- 	// We execute the same script as before
- 	let mvh = window.innerHeight * 0.01;
- 	document.documentElement.style.setProperty('--vh', `${mvh}px`);
+	// We execute the same script as before
+	let mvh = window.innerHeight * 0.01;
+	document.documentElement.style.setProperty('--vh', `${mvh}px`);
 });
 
 $(function(){
@@ -87,7 +87,7 @@ $(function(){
 	$('header .all_menu_btn').click(function(){
 		$('header').toggleClass('on');
 	});
-	$('header #gnb > ul ul li a').click(function(){
+	$('header #gnb > ul ul li a, .contact_btn').click(function(){
 		$('header').removeClass('on');
 	});
 
@@ -147,6 +147,11 @@ $(function(){
 		$('.swiper_m > ul > li').removeClass('swiper-slide');
 	}
 
+	/**************** BROWSER WIDTH ****************/
+	$('.contact_btn').click(function(){
+		$('#contact').toggleClass('on');
+	});
+	
 	/**************** BROWSER WIDTH ****************/
 	var width = $(window).width();
 	$(window).on('resize', function() {

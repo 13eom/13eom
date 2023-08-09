@@ -1,6 +1,4 @@
 <?php include_once $_SERVER['DOCUMENT_ROOT']."/common/include/header.php"; ?>
-<script type="text/javascript" src="/common/js/main.js"></script>
-<link rel="stylesheet" href="/common/css/main.css">
 </head>
 <body>
 		
@@ -48,6 +46,7 @@
 			</div>
 			<a class="dim cover close"></a>
 		</div>
+		<!-- //PORTFOLIO VIEW POPUP -->
 
 		<!------ INTRO ------->
 		<div id="intro" class="vh100">
@@ -73,8 +72,42 @@
 			</div>
 		</div>
 		<!----- //INTRO ------>
-
-		<div class="content">
+		
+		<!------ CONTACT ------->
+		<div id="contact">
+			<div class="container">
+				<div class="visual_tit">
+					<div class="inner">
+						<span class="cate">Contact</span>
+						<div class="tit">
+							<p class="fx"><b>What <em>more</em> are you</b></p>
+							<p class="fx"><b>looking for?</b></p>
+						</div>
+						<div class="bird" data-color="ff682c"></div>
+					</div>
+				</div>
+				<div class="contact_list">
+					<ul>
+						<li>
+							<span>tel</span>
+							<a href="tel:010-5059-9920">010 5059 9920</a>
+						</li>
+						<li>
+							<span>mail</span>
+							<a href="mailto:dltmdqja6563@gmail.com">dltmdqja6563@gmail.com</a>
+						</li>
+						<li>
+							<span>insta</span>
+							<a href="instagram.com/_13eom/" target="_blank">instagram/_13eom/</a>
+						</li>
+					</ul>
+					<button class="contact_btn">← Back</button>
+				</div>
+			</div>
+		</div>
+		<!------ //CONTACT ------->
+		
+		<div id="contents">
 			<div id="main_visual" class="container vh100">
 				<div class="wave_line wave1" data-aos=""></div>
 				<div class="wave_line wave4" data-aos=""></div>
@@ -156,6 +189,7 @@
 										</li>
 									</ul>
 									<a class="view_box" href="" target="_blank">
+										<video src="" muted loop class="best_pf_vid cover"></video>
 									</a>
 								</div>
 							</div>
@@ -276,9 +310,9 @@
 				<div class="bg cover tcX">
 					<div class="sticky_box vh100">
 						<p class="info container">
+							This is a list of all my portfolios. <br>	
 							Click on the project name to go to that site. <br>
-							All projects with bold text are <br>
-							100% my own work.
+							<i></i> 100% my own work.
 						</p>
 					</div>
 				</div>
@@ -432,7 +466,7 @@
 				</svg>
 				<div class="contact_box p_center">
 					<p><span>Birdman's flight <em>never stops</em>. </span></p>
-					<p><span><em>Click the</em> <a href=""><i>Contact me</i></a> to <em>catch</em> Birdman.</span></p>
+					<p><span><em>Click the</em> <a class="contact_btn"><i>Contact me</i></a> to <em>catch</em> Birdman.</span></p>
 					<p><span>Thank you for visiting.</span></p>
 				</div>
 			</div>

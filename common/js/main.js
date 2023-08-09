@@ -63,13 +63,12 @@ $(function(){
 	var pf_list_w = pf_list.children('ul.tit_list');
 
 	$.ajax({
-		url : "../13eom/common/ajax/project.json",
+		url : "./13eom/common/ajax/project.json",
 		type : "get",
 		dataType: "json",
 		success : function(data) {
 			/******* BEST PORTFOLIO *******/
 			function best_pf_var(index){
-				console.log(data[index].pf_url);
 				best_pf.find('.info_box .info_list li.date .amount p').text(data[index].date_y+'.'+data[index].date_m); 
 				best_pf.find('.info_box .info_list li.contribution .amount p').text(data[index].contribution); 
 				if(data[index].details === undefined){
@@ -87,6 +86,7 @@ $(function(){
 					}
 				}
 				best_pf.find('.info_box .view_box').attr('href', data[index].pf_url);
+				best_pf.find('.info_box .view_box video').attr('src', `/video/best_pf${index}.mp4`);
 			}
 
 			// BEST PF : LIST
@@ -97,9 +97,12 @@ $(function(){
 					best_pf.find('.list_box .list ul').append(
 					`<li>${data[idx].name} <span>${data[idx].date_y}</span><i></i></li>`
 					);
+
+					$('header #gnb > ul > li.pf ul').append(
+            `<li><a href="${data[idx].pf_url}" target="_blank">${data[idx].name}</a></li>`
+					);
 					
 					best_pf_leng[best_pf_idx] = idx;
-					console.log(best_pf_leng);
 					best_pf_idx++;
 				}
 			}
@@ -118,13 +121,16 @@ $(function(){
 			/******* ALL PORTFOLIO *******/
 			pf_list_w.each(function(i,e){
 				for(idx=0; idx<data.length; idx++){
+					var all_pf_li = document.createElement('li');
+					if(data[idx].contribution == "100%"){
+						all_pf_li.setAttribute('class', 'all_mine');
+					}
 					if(data[idx].date_y == [2021+i]){
-						pf_list_w.eq(i).append(
-							`<li>
-								<p>${data[idx].name}</p>
-								<p>${data[idx].name}</p>
-							</li>`
-						); 
+						all_pf_li.innerHTML = `
+							<p>${data[idx].name}</p>
+							<p>${data[idx].name}</p>
+						`
+						pf_list_w.eq(i).append(all_pf_li); 
 					}
 				}
 			});
@@ -207,6 +213,17 @@ $(function(){
 		.to( tit_tag.find("span i"),1,{ height: '13rem',},'scene1')
 		.to( "#main_best_pf .sticky_box .pf_box .inner .pf_con",1,{ opacity: 1, y: "0%",},'scene1')
 	}
+	var best_pf_vid = document.getElementsByClassName('best_pf_vid');
+	var vid_pause_anchor = $('#main_feature').offset().top;
+	var vid_play_anchor = $('#main_best_pf').offset().top;
+	$(window).scroll(function(){
+		var scrTop = $(this).scrollTop();
+		if(scrTop > vid_play_anchor && scrTop < vid_pause_anchor){
+			best_pf_vid[0].play();
+		}else{
+			best_pf_vid[0].pause();
+		}
+	});
 
 	/************ FEATURE ************/
 	var interaction_box = $('#main_feature .feature_list ul li.interaction .ani_box');
@@ -251,10 +268,11 @@ $(function(){
 			$('.cursor').removeClass('visit_on');
 		}
 	});
-	
-	// $(window).scroll(function(){
-	// 	pf_view.removeClass('on');
-	// });
+	if(pc.matches == false){
+		$(window).scroll(function(){
+			pf_view.removeClass('on');
+		});
+	}
 
 	for(i=0; i<pf_list.length; i++){
 		let all_pf_year = gsap.timeline({

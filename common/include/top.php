@@ -4,7 +4,7 @@
 
 <header>
   <div class="container">
-    <a href="" class="logo"></a>
+    <a href="/" class="logo"></a>
     <div id="gnb">
       <ul>
         <li class="dep2">
@@ -22,24 +22,19 @@
             <li><a href="/index.php#main_about">About me</a></li>
           </ul>
         </li>
-        <li class="dep2">
+        <li class="dep2 pf">
           <a>
             <span>portfolio</span>
             <span>portfolio</span>
           </a>
-          <ul>
-            <li><a href="">menu1</a></li>
-            <li><a href="">menu2</a></li>
-          </ul>
+          <ul></ul>
         </li>
-        <li><a href="">
-          <span>skill</span>
-          <span>skill</span>
-        </a></li>
-        <li><a href="">
-          <span>contact</span>
-          <span>contact</span>
-        </a></li>
+        <li>
+          <a class="contact_btn">
+            <span>contact</span>
+            <span>contact</span>
+          </a>
+        </li>
       </ul>
       <div class="bird mo" data-color="863B32"></div>
     </div>

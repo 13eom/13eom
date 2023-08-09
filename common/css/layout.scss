@@ -127,52 +127,53 @@ BODY 최상단에 삽입하세요.
 .audio_list{ opacity: 0; overflow: hidden; width: 1px; height: 1px; position: absolute; left: 0; top:0; }
 
 /*************** HEADER ***************/
-header{ width: 100%; position: fixed; left: 0; top: 0; z-index: 999; transition: 1s $ease_out; transform: translateY(-100%); padding: 41rem 0;font-weight: 300;
+header{ width: 100%; position: fixed; left: 0; top: 0; z-index: 999; transition: 1s $ease_out; padding: 41rem 0;font-weight: 300;
 	&.load, &.nav-up{ transform: translateY(0);}
 	&.nav-down{ transform: translateY(-100%);}
-	.container{ display: flex; justify-content: space-between; align-items: center;
-		#gnb{ position: absolute; left: 50%; transform: translateX(-50%); color: $ci;
-			> ul{ display: flex; align-items: center;
-				> li{position: relative; text-align: center; margin: 0 25rem;
-					&.dep2::before{ content: ''; display: block; width: 10rem; height: 10rem; background: url(../../images/common/arrow.svg)no-repeat center center / contain; position: absolute; right: -17rem; top: 0; transition: .5s ease;}
-					> a{ position: relative; overflow: hidden; height: 20rem;
-						span{ display: block; transition: .5s ease; text-align: center; height: 100%; line-height: 20rem; padding: 0 3rem;
-							+ span{font-weight: 500;}
-						}
+	.container{ display: flex; justify-content: space-between; align-items: center;}
+	#gnb{ position: absolute; left: 50%; transform: translateX(-50%); color: $ci;
+		> ul{ display: flex; align-items: center;
+			> li{position: relative; text-align: center; margin: 0 25rem;
+				&.dep2::before{ content: ''; display: block; width: 10rem; height: 10rem; background: url(../../images/common/arrow.svg)no-repeat center center / contain; position: absolute; right: -17rem; top: 0; transition: .5s ease;}
+				> a{ position: relative; overflow: hidden; height: 20rem;
+					span{ display: block; transition: .5s ease; text-align: center; height: 100%; line-height: 20rem; padding: 0 3rem;
+						+ span{font-weight: 500;}
 					}
-					ul{ position: absolute; left: -20rem; top: 0; padding: 60rem 20rem 1rem; transition: .3s ease; touch-action: none; pointer-events: none; overflow: hidden; text-align: left;
-						&::before{ content: ''; display: block; width: 1px; height: 0; background-color: $ci; position: absolute; left: 0; top: 0; transition: 1s $ease_out;}
-						li{ white-space: nowrap; opacity: 1; transform: translateX(-50rem); opacity: 0; transition: 1s $ease_out;
-							+ li{ margin-top: 20rem;}
-						}
-					}
-					&:hover{
-						&::before{ transform: rotate(180deg);}
-						a span{ transform: translateY(-100%);}
-						ul{ touch-action: auto; pointer-events: auto;
-							&::before{ height: 100%;}
-							li{ transform: translateX(0); opacity: 1; transition-delay: .2s;
-								@for $i from 1 to 10{
-									&:nth-child(#{$i+1}){
-										transition-delay:.1s * $i+.2;
-									}
-								}
-							}
-						}
+				}
+				ul{ position: absolute; left: -20rem; top: 0; padding: 60rem 20rem 1rem; transition: .3s ease; touch-action: none; pointer-events: none; overflow: hidden; text-align: left;
+					&::before{ content: ''; display: block; width: 1px; height: 0; background-color: $ci; position: absolute; left: 0; top: 0; transition: 1s $ease_out;}
+					li{ white-space: nowrap; opacity: 1; transform: translateX(-50rem); opacity: 0; transition: 1s $ease_out;
+						+ li{ margin-top: 20rem;}
+						a{ transition: 1s $ease-out;}
+						&:hover a{ text-indent: 10rem; color: $text;}
 					}
 				}
 			}
 		}
-
-		.bgm_btn{ width: 142rem; padding: 10rem; text-align: center; background-color: $bg4; border-radius: 999rem; overflow: hidden; position: relative;
-			&::before{ content: 'click to pause'; position: relative; z-index: 1;}
-			&::after{ content: ''; width: 150%; height: 200%; position: absolute; left: 50%; top:100%; transform: translateX(-50%); background-color: $ci; border-radius: 50% 50% 0 0; transition: .5s ease;}
-			&:hover::after{top: -100%;}
-			.sound_btn{ z-index: 2;}
-			&.on{
-				&::before{ content: 'click to play';}
-				.sound_btn.off{ display: none;}
+	}
+	&:not(.nav-down) #gnb > ul > li:hover{
+		&::before{ transform: rotate(180deg);}
+		a span{ transform: translateY(-100%);}
+		ul{ touch-action: auto; pointer-events: auto;
+			&::before{ height: 100%;}
+			li{ transform: translateX(0); opacity: 1; transition-delay: .2s;
+				@for $i from 1 to 10{
+					&:nth-child(#{$i+1}){
+						transition-delay:.1s * $i+.2;
+					}
+				}
 			}
+		}
+	}
+
+	.bgm_btn{ width: 142rem; padding: 10rem; text-align: center; background-color: $bg4; border-radius: 999rem; overflow: hidden; position: relative;
+		&::before{ content: 'click to pause'; position: relative; z-index: 1;}
+		&::after{ content: ''; width: 150%; height: 200%; position: absolute; left: 50%; top:100%; transform: translateX(-50%); background-color: $ci; border-radius: 50% 50% 0 0; transition: .5s ease;}
+		&:hover::after{top: -100%;}
+		.sound_btn{ z-index: 2;}
+		&.on{
+			&::before{ content: 'click to play';}
+			.sound_btn.off{ display: none;}
 		}
 	}
 }
@@ -219,50 +220,48 @@ footer{width: 100%; position: fixed; left: 0; bottom: 0; padding: 60rem 0; overf
 	/*************** HEADER ***************/
 	header{ padding: 20rem 0;
 		.logo{ z-index: 2;}
-		.container{
-			#gnb{ left: 0; top: -20px; transform: translateY(-100%); padding-top: 80rem; background-color: $bg1; width: 100%; height: 100vh; transition: 1s $ease-out; overflow: hidden;
-				> ul{ display: block; z-index: 1; position: relative;
-					> li{position: relative; text-align: center; margin: 0; padding: 12rem 20rem; background-color: $bg1;
-						&::after{ content: ''; width: 100%; height: 1px; background-color: $text; position: absolute; left: 0; bottom: 0;}
-						&.dep2::before{width: 12rem; height: 12rem; right: 20rem; top: 16rem;}
-						> a{ height: 20rem;
-							span{text-align: left;}
-						}
-						ul{ position: relative; left: 4rem; padding:0 15rem; margin: 0; max-height: 0;
-							&::before{ background-color: $bg2;}
-							li + li{ margin-top: 10rem;}
-						}
-						&:hover{
-							ul{ max-height: 300rem; padding: 6rem 15rem; margin: 15rem 0 10rem;}
-						}
+		#gnb{ left: 0; top: -20px; transform: translateY(-100%); padding-top: 80rem; background-color: $bg1; width: 100%; height: 100vh; transition: 1s $ease-out; overflow: hidden;
+			> ul{ display: block; z-index: 1; position: relative;
+				> li{position: relative; text-align: center; margin: 0; padding: 12rem 20rem; background-color: $bg1;
+					&::after{ content: ''; width: 100%; height: 1px; background-color: $text; position: absolute; left: 0; bottom: 0;}
+					&.dep2::before{width: 12rem; height: 12rem; right: 20rem; top: 16rem;}
+					> a{ height: 20rem;
+						span{text-align: left;}
+					}
+					ul{ position: relative; left: 4rem; padding:0 15rem; margin: 0; max-height: 0;
+						&::before{ background-color: $bg2;}
+						li + li{ margin-top: 15rem;}
+					}
+					&:hover{
+						ul{ max-height: 300rem; padding: 6rem 15rem; margin: 15rem 0 10rem;}
 					}
 				}
-				.bird{ position: absolute; width: 100%; left: 20rem; bottom: 0; transform: translateY(400rem); opacity: 0; transition: 1s $ease-out;}
 			}
+			.bird{ position: absolute; width: 100%; left: 20rem; bottom: 0; transform: translateY(400rem); opacity: 0; transition: 1s $ease-out;}
+		}
 
-			.btn_wrap{ display: flex; align-items: center; position: relative; z-index: 2;
-				.bgm_btn{ width:60rem; height: 30rem; padding: 9rem; font-size: 12rem; margin-right: 20rem;
-					&::before{ content: 'pause';}
-					&::after{ display: none;}
-					&.on{
-						&::before{ content: 'play';}
-						.sound_btn.off{ display: none;}
-					}
+		.btn_wrap{ display: flex; align-items: center; position: relative; z-index: 2;
+			.bgm_btn{ width:60rem; height: 30rem; padding: 9rem; font-size: 12rem; margin-right: 20rem;
+				&::before{ content: 'pause';}
+				&::after{ display: none;}
+				&.on{
+					&::before{ content: 'play';}
+					.sound_btn.off{ display: none;}
 				}
-				.all_menu_btn{ width: 24rem; height: 16rem; cursor: pointer; position: relative;
-					span{ width: 100%; height: 1px; background-color: $bg4; position: absolute; overflow: hidden; transform-origin: center center; transition: 1s $ease-out; left: 0; top: 0;
-						&::before{ content: ''; display: block; position: absolute; left: 0; top: 0; height: 100%; right: 100%; background-color: $ci; animation: all_menu 2s $ease infinite;}
-						&:nth-child(2){ top: 49%; transition-duration: 1.3s; transform-origin: left center;
-							&::before{ animation-delay: .3s;}
-						}
-						&:nth-child(3){ top: 100%; transition-duration: 1.6s;
-							&::before{ animation-delay: .6s;}
-						}
-						@keyframes all_menu {
-							0%{ left: 0; right: 100%;}
-							50%{ right: 0%;}
-							100%{ left: 100%; right: 0;}
-						}
+			}
+			.all_menu_btn{ width: 24rem; height: 16rem; cursor: pointer; position: relative;
+				span{ width: 100%; height: 1px; background-color: $bg4; position: absolute; overflow: hidden; transform-origin: center center; transition: 1s $ease-out; left: 0; top: 0;
+					&::before{ content: ''; display: block; position: absolute; left: 0; top: 0; height: 100%; right: 100%; background-color: $ci; animation: all_menu 2s $ease infinite;}
+					&:nth-child(2){ top: 49%; transition-duration: 1.3s; transform-origin: left center;
+						&::before{ animation-delay: .3s;}
+					}
+					&:nth-child(3){ top: 100%; transition-duration: 1.6s;
+						&::before{ animation-delay: .6s;}
+					}
+					@keyframes all_menu {
+						0%{ left: 0; right: 100%;}
+						50%{ right: 0%;}
+						100%{ left: 100%; right: 0;}
 					}
 				}
 			}
