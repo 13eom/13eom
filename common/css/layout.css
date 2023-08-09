@@ -161,7 +161,7 @@ header { width: 100%; position: fixed; left: 0; top: 0; z-index: 999; transition
 
 header.load, header.nav-up { transform: translateY(0); }
 
-header.nav-down { transform: translateY(-100%); }
+header.nav-down { transform: translateY(-100%) !important; }
 
 header .container { display: flex; justify-content: space-between; align-items: center; }
 
