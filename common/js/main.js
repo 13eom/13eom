@@ -150,7 +150,6 @@ $(function(){
 					pf_info.find('#pf_ctrbt').text(pf_val.contribution);
 					pf_info.find('#pf_awards').text(pf_val.awards);
 					pf_info.find('#pf_about').text(pf_val.about);
-					$('.cursor').addClass('visit');
 				});
 			});
 
@@ -217,7 +216,7 @@ $(function(){
 	/************ FEATURE ************/
 	var interaction_box = $('#main_feature .feature_list ul li.interaction .ani_box');
 	for(var i=0; i<=40; i++){ //원본 1 + 0부터시작 1 ( 50 + 2개추가됨)
-		var $_clone = interaction_box.find('i:first-child').css('animationDelay',i*.2+'s').clone();
+		var $_clone = interaction_box.find('i:first-child').css('animationDelay',i*.2+'s').clone();//복제될 선택자:first
 		interaction_box.append($_clone); //복제될 선택자의 부모
 	};
 
@@ -246,10 +245,10 @@ $(function(){
 	
 	$('#pf_view .close').on("click",function() {
 		pf_view.removeClass('on');
-		$('.cursor').removeClass('visit');
+		// $('.cursor').removeClass('visit');
 	});
 
-	$('#pf_view .view_popup').on({
+	$('.view_box').on({
 		mouseenter: function(){
 			$('.cursor').addClass('visit_on');
 		}
@@ -309,7 +308,7 @@ $(function(){
 	.to( ".window_box_wrap .window_box .img_wrap li.img2",1.5,{ x:"-60rem",},'scene2')
 	.to( ".window_box_wrap .window_box .img_wrap li.img3",1.5,{ x:"60rem",},'scene2')
 	.to( ".window_box_wrap .window_box .img_wrap li.img4, .window_box_wrap .window_box .img_wrap li.img5",1.5,{ y:"60rem",},'scene2')
-	.to( ".window_box_wrap .window_box .img_wrap li img",1.7,{ scale:1,},'scene2')
+	.to( ".window_box_wrap .window_box .img_wrap li img",2,{ scale:1,},'scene2')
 
 	/************ ABOUT ME ************/
 	let about_cross = gsap.timeline({

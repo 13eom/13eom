@@ -126,7 +126,7 @@ BODY 최상단에 삽입하세요.
 
 .logo::before { content: 'birdman'; display: block; font-weight: 400; }
 
-.logo::after { content: ''; display: block; width: 10%; height: 100%; background: url(../../images/common/logo.svg) no-repeat center top/100% auto; position: absolute; left: 102%; top: 0; }
+.logo::after { content: ''; display: block; width: 10%; height: 100%; background: url(/images/common/logo.svg) no-repeat center top/100% auto; position: absolute; left: 102%; top: 0; }
 
 /* WAVE LINE */
 .wave_line { position: absolute; width: 100%; overflow: hidden; }
@@ -154,6 +154,15 @@ BODY 최상단에 삽입하세요.
 
 .cursor.on { transform: translate(-50%, -50%) scale(1); background-color: rgba(255, 104, 44, 0.3); }
 
+.cursor.visit_on { justify-content: flex-start; overflow: hidden; }
+
+.cursor.visit_on::before, .cursor.visit_on::after { content: 'Visit web Visit web Visit web Visit web'; flex-shrink: 0; font-family: 'Pretendard', sans-serif; font-size: 18rem; animation: visit_wave 10s linear infinite; opacity: 1; transition: .5s ease; font-weight: 200; }
+
+@keyframes visit_wave { 0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); } }
+
+.cursor.value_on { transform: scale(3); background-color: #401D19; mix-blend-mode: difference; }
+
 .audio_list { opacity: 0; overflow: hidden; width: 1px; height: 1px; position: absolute; left: 0; top: 0; }
 
 /*************** HEADER ***************/
@@ -171,7 +180,7 @@ header #gnb > ul { display: flex; align-items: center; }
 
 header #gnb > ul > li { position: relative; text-align: center; margin: 0 25rem; }
 
-header #gnb > ul > li.dep2::before { content: ''; display: block; width: 10rem; height: 10rem; background: url(../../images/common/arrow.svg) no-repeat center center/contain; position: absolute; right: -17rem; top: 0; transition: .5s ease; }
+header #gnb > ul > li.dep2::before { content: ''; display: block; width: 10rem; height: 10rem; background: url(/images/common/arrow.svg) no-repeat center center/contain; position: absolute; right: -17rem; top: 0; transition: .5s ease; }
 
 header #gnb > ul > li > a { position: relative; overflow: hidden; height: 20rem; }
 
@@ -256,7 +265,7 @@ footer .container .resume p { line-height: 1.2; }
 
 footer .container .resume .down_btn { display: flex; align-items: center; margin-top: 18rem; font-size: 14rem; }
 
-footer .container .resume .down_btn span { background: url(../../images/common/arrow_btn.svg) no-repeat right center/auto 90%; padding-right: 20rem; margin-right: 20rem; }
+footer .container .resume .down_btn span { background: url(/images/common/arrow_btn.svg) no-repeat right center/auto 90%; padding-right: 20rem; margin-right: 20rem; }
 
 footer .container .resume .down_btn a { text-decoration: underline; }
 

@@ -5,7 +5,7 @@
 
   /************** INTRO **************/
   @at-root{
-    html,body{ overflow: hidden; height: 100%;}
+    // html,body{ overflow: hidden; height: 100%;}
     .cursor{
       &::before{ font-size: 20rem; font-family: 'PT Serif', serif;}
       &.bgm_on::before{ content: 'on'; display: block;}
@@ -14,7 +14,7 @@
       }
     }
   }
-  #intro{ z-index: 9999; width: 100%; height: 100vh; overflow: hidden;position: fixed; left: 0; top: 0; background-color: $bg1; transition: 1.5s $ease2;
+  #intro{ display: none; z-index: 9999; width: 100%; height: 100vh; overflow: hidden;position: fixed; left: 0; top: 0; background-color: $bg1; transition: 1.5s $ease2;
     .con_box{ position: relative; width: 500rem; height: 500rem;
       &::before{ content: ''; width: 100%; height: 100%; border-radius: 50%; border: 1px solid transparent; transition: 1.6s $ease_out 1s,border-color 0s; position: absolute; left: 0; top: 0; transform: scale(.9);}
       .circle_box{ width: 100%; height: 100%; border-radius: 50%; position: relative; overflow: hidden; transition: 1s $ease2;
@@ -81,7 +81,7 @@
     .visual_tit{padding: 145rem 0 70rem;
       .cate{ display: block; color: $ci; font-size: 18rem; transform: translateY(150%); transition: 1s $ease-out; opacity: 0;}
       .tit{ margin-top: 90rem; font-size: 96rem; letter-spacing: -2rem; z-index: 1; position: relative;
-        p{ padding: 15rem 0; 
+        p{ padding: 12rem 0; 
           + p{ margin-top: -20rem;}
         }
       }
@@ -132,7 +132,9 @@
         .bird{ display: inline-block; width: 8rem; transform: translateY(-60%);}
       }
     }
-    .sub_txt{ color: $ci; position: absolute; left: 0; bottom: 0; line-height: 1.6;}
+    .sub_txt{ color: $ci; position: absolute; left: 0; bottom: 0; line-height: 1.6;
+      em{ color: $text;}
+    }
   }
 
   #main_best_pf{ position: relative; margin-top: -63vh; height: 2000rem;
@@ -191,6 +193,12 @@
                 }
               }
               .view_box{ height: 333rem;flex-shrink: 0; border-radius: 15rem;  background-color: $bg2; margin-top: 10rem; overflow: hidden; position: relative;
+                &::after{ content: ''; display: block; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -20%); background: url(../../images/common/link.svg)no-repeat center center / 35% auto; width: 40rem; height: 40rem; border-radius: 50%; border: 1px solid $ci; z-index: 1; opacity: 0; transition: 1s $ease-out;}
+                video{ transition: 1s $ease-out;}
+                &:hover{
+                  &::after{ transform: translate(-50%, -50%); opacity: 1;}
+                  video{ filter: blur(5rem);}
+                }
               }
             }
           }
@@ -343,7 +351,6 @@
         &.aos-animate::before{ width: 100%;}
       }
     }
-    @at-root .cursor.value_on{ transform: scale(3); background-color: $bg1; mix-blend-mode: difference;}
 
     &.aos-animate{
       .value_box{
@@ -443,12 +450,12 @@
                     &.img_center{ width: 100%; height: 100%;background-color: transparent;
                       .inner{ background-color: $bg2; overflow: hidden;}
                     }
-                    &.img1{ width: 416rem; height: 263rem; left: 20rem; bottom: calc(100% + 20rem);}
+                    &.img1{ width: 416rem; height: 263rem; left: 0; bottom: calc(100% + 20rem);}
                     &.img2{ width: 250rem; height: 330rem; right: calc(100% + 20rem); bottom: 0;}
                     &.img3{ width: 258rem; height: 371rem; left: calc(100% + 20rem); bottom: 0;}
                     &.img4{ width: 364rem; height: 221rem; left: 87rem; top: calc(100% + 20rem)}
                     &.img5{ width: 387rem; height: 264rem; left: 470rem; top:calc(100% + 20rem);}
-                    img{ width: 100%; height: 100%; object-fit: cover; transform: scale(2);}
+                    img{ width: 100%; height: 100%; object-fit: cover; transform: scale(1.6);}
                   }
                 }
               }
@@ -492,17 +499,6 @@
         .inner{ opacity: 1; transition: 1s ease 1.3s;}
       }
     }
-
-    @at-root .cursor.visit{ justify-content: flex-start; overflow: hidden;
-      &::before,&::after{content: 'Visit web Visit web Visit web Visit web'; flex-shrink: 0; font-family: 'Pretendard', sans-serif; font-size: 18rem; animation: visit_wave 10s linear infinite paused; opacity: 0; transition: .5s ease; font-weight: 200;}
-      @keyframes visit_wave {
-        0%{ transform: translateX(0);}
-        100%{ transform: translateX(-100%);}
-      }
-      &.visit_on{
-        &::before,&::after{ animation-play-state: running; opacity: 1;}
-      }
-    }
   }
 
   #main_about{ z-index: 1; background-color: $bg1;
@@ -539,7 +535,7 @@
     svg{ width: 100%;  stroke-dasharray: 3574; stroke-dashoffset: 3574; transition: 1s $ease;}
     .contact_box{ text-align: center; font-size: 60rem; line-height: 1.4;
       p{overflow: hidden;
-        span{ display: block; transform: translateY(100%); transition: 1s ease .3s;
+        span{ display: block; transform: translateY(102%); transition: 1s ease .3s;
           a{ font-size: 18rem; display: inline-block; padding: 18rem 44rem; border-radius: 99rem; border: 1px solid $bg4; transform: translateY(9rem); margin: 0 10rem;  color: $white; position: relative; overflow: hidden;
             &::before{ content: ''; width: 300%; padding-top: 300%; border-radius: 50%; background-color: $ci; position: absolute; left: 50%; transform: translateX(-50%); top: 100%; transition: 1s $ease_out;}
             i{ position: relative; z-index: 2;}
@@ -560,8 +556,6 @@
     }
   }
 }
-
-
 
 
 @media screen and (max-width:1280px) {
@@ -601,11 +595,7 @@
     /************** CONTACT **************/
     #contact{ 
       .visual_tit{padding: 123rem 0 35rem;
-        .tit{ margin-top: 30rem; font-size: 42rem;
-          p{ padding: 15rem 0; 
-            + p{ margin-top: -20rem;}
-          }
-        }
+        .tit{ margin-top: 30rem; font-size: 42rem;}
         .bird{ top: -50rem; width: 60%;}
       }
       .contact_list{ padding: 20rem; width: 100%;
@@ -792,7 +782,15 @@
             .window_box_wrap{
               .window_box{
                 .window_box_inner{ 
-                  .img_wrap{width: 60%; height: 75vw; }
+                  .img_wrap{width: 60%; height: 75vw; 
+                    li{
+                      &.img1{ width: 50vw; height: 32vw;}
+                      &.img2{ width: 39vw; height: 60vw;}
+                      &.img3{ width: 38vw; height: 68vw;}
+                      &.img4{ width: 40vw; height: 23vw; left: auto; right: calc(50% + 10rem);}
+                      &.img5{ width: 58vw; height: 36vw; left: calc(50% + 10rem);}
+                    }
+                  }
                 }
               } 
             }
@@ -860,6 +858,16 @@
             a{ font-size: 14rem; padding: 10rem 20rem; transform: translateY(14rem); margin: 0 5rem;}
           }
         }
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width:500px) {
+  .main{
+    #main_contact .contact_box{ font-size: 3.8vw; padding: 8vw 1vw;
+      p span a{font-size: 2.8vw; padding: 2vw 4vw; transform: translateY(34%); margin: 0 1vw;
       }
     }
   }

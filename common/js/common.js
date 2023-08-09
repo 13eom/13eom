@@ -88,7 +88,7 @@ $(function(){
 		$('header').toggleClass('on');
 	});
 	$('header #gnb > ul ul li a, .contact_btn').click(function(){
-		$('header').removeClass('on');
+		$('header, #contact').removeClass('on');
 	});
 
 	/**************** WH & BH HEADER ****************/

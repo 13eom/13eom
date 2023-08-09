@@ -11,26 +11,27 @@
 	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="./common/js/swiper.min.js"></script>
 	<script type="text/javascript" src="./common/js/aos.js"></script>
-	<script type="text/javascript" src="./common/js/cursor.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollToPlugin.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@latest/bundled/lenis.js"></script>
 	<script type="text/javascript" src="./common/js/common.js" defer></script>
 	<script type="text/javascript" src="./common/js/main.js" defer></script>
-	
+	<script type="text/javascript" src="./common/js/cursor.js" defer></script>
 </head>
 <body>
 		
 	<!-- wrap -->
 	<div id="wrap" class="main">
+		<div class="cursor pc"></div>
+
 		<div class="audio_list">
 			<audio src="./audio/main.wav" loop id="bgm"></audio>
 		</div>
 		
 		<header>
 			<div class="container">
-				<a href="./" class="logo"></a>
+				<a href="#" class="logo"></a>
 				<div id="gnb">
 					<ul>
 						<li class="dep2">
@@ -39,13 +40,13 @@
 								<span>birdman</span>
 							</a>
 							<ul>
-								<li><a href="./index.php">Birdman</a></li>
-								<li><a href="./index.php#main_best_pf">Best portfolio</a></li>
-								<li><a href="./index.php#main_feature">Features</a></li>
-								<li><a href="./index.php#main_skills">Skills</a></li>
-								<li><a href="./index.php#main_value">Value</a></li>
-								<li><a href="./index.php#main_all_pf">All portfolio</a></li>
-								<li><a href="./index.php#main_about">About me</a></li>
+								<li><a href="#">Birdman</a></li>
+								<li><a href="#main_best_pf">Best portfolio</a></li>
+								<li><a href="#main_feature">Features</a></li>
+								<li><a href="#main_skills">Skills</a></li>
+								<li><a href="#main_value">Value</a></li>
+								<li><a href="#main_all_pf">All portfolio</a></li>
+								<li><a href="#main_about">About me</a></li>
 							</ul>
 						</li>
 						<li class="dep2 pf">
@@ -77,11 +78,10 @@
 				</div>
 			</div>
 		</header>
-		<div class="cursor pc"></div>
 		
 		<!-- PORTFOLIO VIEW POPUP -->
 		<div id="pf_view">
-			<div class="view_popup p_center">
+			<div class="view_popup p_center view_box">
 				<svg viewBox="0 0 1060 678" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<rect x="0.5" y="0.658447" width="1059" height="676" rx="29.5" stroke="#FF682C"/>
 				</svg>
@@ -197,10 +197,9 @@
 						</a>
 					</div>
 					<p class="sub_txt" data-aos="fade-up" data-aos-offset="0">
-						Ventriloc développe des solutions <br>
-						innovantes centrées sur la donnée pour <br>
-						des humains responsables de prendre <br>
-						des décisions éclairées.
+						The design of this portfolio website <br>
+						was designed with reference  <br>
+						to the <em>ventriloc</em> website.
 					</p>
 				</div>
 			</div>
@@ -230,7 +229,7 @@
 									</div>
 									<div class="list">
 										<strong class="pt">Portfolio list</strong>
-										<ul></ul>
+										<ul class="btn_list"></ul>
 									</div>
 								</div>
 								<div class="info_box">
@@ -262,7 +261,7 @@
 										</li>
 									</ul>
 									<a class="view_box" href="" target="_blank">
-										<video src="" muted loop class="best_pf_vid cover"></video>
+										<video src="" muted autoplay playsinline loop class="best_pf_vid cover"></video>
 									</a>
 								</div>
 							</div>
@@ -404,18 +403,7 @@
 					</div>
 					<div class="year p_center pt">
 						<p>
-							<i>M</i>
-							<i>Y</i>
-							<i>&nbsp;</i>
-							<i>P</i>
-							<i>O</i>
-							<i>R</i>
-							<i>T</i>
-							<i>F</i>
-							<i>O</i>
-							<i>L</i>
-							<i>I</i>
-							<i>O</i>
+							<i>M</i><i>Y</i><i>&nbsp;</i><i>P</i><i>O</i><i>R</i><i>T</i><i>F</i><i>O</i><i>L</i><i>I</i><i>O</i>
 						</p>
 						<p><i>2</i><i>0</i><i>2</i><i>1</i></p>
 						<p><i>2</i><i>0</i><i>2</i><i>2</i></p>
@@ -424,13 +412,13 @@
 				</div>
 				<div class="pf_list_wrap">
 					<div class="pf_list y_2021 taR">
-						<ul class="tit_list container"></ul>
+						<ul class="tit_list btn_list container"></ul>
 					</div>
 					<div class="pf_list y_2022">
-						<ul class="tit_list container"></ul>
+						<ul class="tit_list btn_list container"></ul>
 					</div>
 					<div class="pf_list y_2023 taC">
-						<ul class="tit_list container"></ul>
+						<ul class="tit_list btn_list container"></ul>
 						<div class="window_box_wrap cover">
 							<div class="window_box vh100">
 								<div class="window_box_inner vh100">

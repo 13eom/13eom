@@ -28,12 +28,14 @@ $(function(){
 		}).on("mouseleave", function(e) {
 			cursor.css('opacity', 0);
 		});
-
-		// 특정 클래스에 HOVER하면 STYLE이 바뀝니다
-		$("input, a, input, button").on("mouseenter", function() {
-			cursor.addClass("on");
-		}).on("mouseleave", function() {
-			cursor.removeClass("on");
-		});
 	}
 });
+
+$(window).load(function() {
+	$("input, a, input, button, .btn_list > li").on("mouseenter", function() {
+		cursor.addClass("on");
+	}).on("mouseleave", function() {
+		cursor.removeClass("on");
+	});
+});
+
