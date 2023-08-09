@@ -213,17 +213,6 @@ $(function(){
 		.to( tit_tag.find("span i"),1,{ height: '13rem',},'scene1')
 		.to( "#main_best_pf .sticky_box .pf_box .inner .pf_con",1,{ opacity: 1, y: "0%",},'scene1')
 	}
-	var best_pf_vid = document.getElementsByClassName('best_pf_vid');
-	var vid_pause_anchor = $('#main_feature').offset().top;
-	var vid_play_anchor = $('#main_best_pf').offset().top;
-	$(window).scroll(function(){
-		var scrTop = $(this).scrollTop();
-		if(scrTop > vid_play_anchor && scrTop < vid_pause_anchor){
-			best_pf_vid[0].play();
-		}else{
-			best_pf_vid[0].pause();
-		}
-	});
 
 	/************ FEATURE ************/
 	var interaction_box = $('#main_feature .feature_list ul li.interaction .ani_box');
