@@ -124,10 +124,9 @@
 						</a>
 					</div>
 					<p class="sub_txt" data-aos="fade-up" data-aos-offset="0">
-						Ventriloc développe des solutions <br>
-						innovantes centrées sur la donnée pour <br>
-						des humains responsables de prendre <br>
-						des décisions éclairées.
+						The design of this portfolio website <br>
+						was designed with reference  <br>
+						to the ventriloc website.
 					</p>
 				</div>
 			</div>
