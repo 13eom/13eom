@@ -86,7 +86,7 @@ $(function(){
 					}
 				}
 				best_pf.find('.info_box .view_box').attr('href', data[index].pf_url);
-				best_pf.find('.info_box .view_box video').attr('src', `/video/best_pf${index}.mp4`);
+				best_pf.find('.info_box .view_box video').attr('src', `/13eom/video/best_pf${index}.mp4`);
 			}
 
 			// BEST PF : LIST
@@ -228,7 +228,7 @@ $(function(){
 	/************ FEATURE ************/
 	var interaction_box = $('#main_feature .feature_list ul li.interaction .ani_box');
 	for(var i=0; i<=40; i++){ //원본 1 + 0부터시작 1 ( 50 + 2개추가됨)
-		var $_clone = interaction_box.find('i:first-child').css('animationDelay',i*.2+'s').clone();//복제될 선택자:first
+		var $_clone = interaction_box.find('i:first-child').css('animationDelay',i*.2+'s').clone();
 		interaction_box.append($_clone); //복제될 선택자의 부모
 	};
 
