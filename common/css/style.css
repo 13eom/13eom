@@ -454,7 +454,7 @@ html, body { overflow: hidden; height: 100%; }
 
 .main #main_all_pf .pf_list_wrap .pf_list ul.tit_list li p { padding: 12rem 30rem; transition: .5s ease; white-space: nowrap; }
 
-.main #main_all_pf .pf_list_wrap .pf_list ul.tit_list li p + p { position: absolute; left: 0; top: 100%; font-family: 'PT Serif', serif; color: #ff682c; font-size: 1em; font-size: .975em; }
+.main #main_all_pf .pf_list_wrap .pf_list ul.tit_list li p + p { position: absolute; left: 0; top: 100%; font-family: 'PT Serif', serif; color: #ff682c; font-size: 1em; font-size: .975em; width:100%; }
 
 .main #main_all_pf .pf_list_wrap .pf_list ul.tit_list li:hover p { transform: translateY(-100%); }
 
