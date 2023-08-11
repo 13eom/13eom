@@ -55,7 +55,7 @@ em { color: #ff682c; font-family: 'PT Serif', sans-serif; }
 ------------------------------------ 
 BODY 최상단에 삽입하세요.
 */
-.pop_wrap { width: 100%; height: 100vh; position: fixed; left: 0; top: 0; right: 0; bottom: 0; opacity: 0; transition: .5s ease; pointer-events: none; touch-action: none; z-index: 9999; }
+.pop_wrap { width: 100%; height: 100vh; height: calc(var(--vh, 1vh) * 100); position: fixed; left: 0; top: 0; right: 0; bottom: 0; opacity: 0; transition: .5s ease; pointer-events: none; touch-action: none; z-index: 9999; }
 
 .pop_wrap .pop_btn { cursor: pointer; }
 
@@ -108,7 +108,10 @@ BODY 최상단에 삽입하세요.
 
 .fx:nth-child(11) b { transition-delay: 1s; }
 
-.aos-animate > .fx b, .aos-animate.fx b, .swiper-slide-active .fx b { transform: translateY(0); }
+.aos-animate > .fx b, 
+.aos-animate.fx b, 
+.swiper-slide-active .fx b,
+.fx.on b{ transform: translateY(0); }
 
 /* ETC */
 .wImg { filter: brightness(0) invert(1); }
@@ -168,9 +171,10 @@ BODY 최상단에 삽입하세요.
 /*************** HEADER ***************/
 header { width: 100%; position: fixed; left: 0; top: 0; z-index: 999; transition: 1s cubic-bezier(0.16, 1, 0.3, 1); padding: 41rem 0; font-weight: 300; }
 
-header.load, header.nav-up { transform: translateY(0); }
+header.load, header.nav-up, header.active { transform: translateY(0); }
 
-header.nav-down { transform: translateY(-100%) !important; }
+header:not(.active).nav-down,
+#wrap:not(.on) header{ transform: translateY(-100%) !important; }
 
 header .container { display: flex; justify-content: space-between; align-items: center; }
 
@@ -281,7 +285,7 @@ footer .container .resume .down_btn a + a { margin-left: 12rem; }
   /*************** HEADER ***************/
   header { padding: 20rem 0; }
   header .logo { z-index: 2; }
-  header #gnb { left: 0; top: -20px; transform: translateY(-100%); padding-top: 80rem; background-color: #401D19; width: 100%; height: 100vh; transition: 1s cubic-bezier(0.16, 1, 0.3, 1); overflow: hidden; }
+  header #gnb { left: 0; top: -20px; transform: translateY(-100%); padding-top: 80rem; background-color: #401D19; width: 100%; height: 100vh; height: calc(var(--vh, 1vh) * 100); transition: 1s cubic-bezier(0.16, 1, 0.3, 1); overflow: hidden; }
   header #gnb > ul { display: block; z-index: 1; position: relative; }
   header #gnb > ul > li { position: relative; text-align: center; margin: 0; padding: 12rem 20rem; background-color: #401D19; }
   header #gnb > ul > li::after { content: ''; width: 100%; height: 1px; background-color: #EDD0C6; position: absolute; left: 0; bottom: 0; }

@@ -1,14 +1,13 @@
 <?php include_once $_SERVER['DOCUMENT_ROOT']."/common/include/header.php"; ?>
 </head>
 <body>
-		
 	<!-- wrap -->
 	<div id="wrap" class="main">
 		<?php include_once $_SERVER['DOCUMENT_ROOT']."/common/include/top.php"; ?>
 		
 		<!-- PORTFOLIO VIEW POPUP -->
 		<div id="pf_view">
-			<div class="view_popup p_center">
+			<div class="view_popup p_center view_box">
 				<svg viewBox="0 0 1060 678" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<rect x="0.5" y="0.658447" width="1059" height="676" rx="29.5" stroke="#FF682C"/>
 				</svg>
@@ -109,24 +108,24 @@
 		
 		<div id="contents">
 			<div id="main_visual" class="container vh100">
-				<div class="wave_line wave1" data-aos=""></div>
-				<div class="wave_line wave4" data-aos=""></div>
+				<div class="wave_line wave1 ani_box"></div>
+				<div class="wave_line wave4 ani_box"></div>
 				<div class="inner">
 					<div class="tit_box">
 						<div class="tit">
-							<h1 class="fx" data-aos=""><b><em>ingenious</em>, logical </b></h1>
-							<h1 class="fx" data-aos=""><b><span class="pt">free-flowing</span> with ideas, </b></h1>
-							<h1 class="fx" data-aos=""><b>his name is <em class="name">birdman</em>.</b></h1>
+							<h1 class="fx ani_box"><b><em>ingenious</em>, logical </b></h1>
+							<h1 class="fx ani_box"><b><span class="pt">free-flowing</span> with ideas, </b></h1>
+							<h1 class="fx ani_box"><b>his name is <em class="name">birdman</em>.</b></h1>
 						</div>
-						<a href="" data-aos="fade-up" data-aos-delay="300">
+						<a class="fade_up ani_box">
 							Tracking the flight
 							<div class="bird" data-color="EDD0C6"></div>
 						</a>
 					</div>
-					<p class="sub_txt" data-aos="fade-up" data-aos-offset="0">
+					<p class="sub_txt fade_up ani_box">
 						The design of this portfolio website <br>
 						was designed with reference  <br>
-						to the ventriloc website.
+						to the <em>ventriloc</em> website.
 					</p>
 				</div>
 			</div>
@@ -156,7 +155,7 @@
 									</div>
 									<div class="list">
 										<strong class="pt">Portfolio list</strong>
-										<ul></ul>
+										<ul class="btn_list"></ul>
 									</div>
 								</div>
 								<div class="info_box">
@@ -188,7 +187,7 @@
 										</li>
 									</ul>
 									<a class="view_box" href="" target="_blank">
-										<video src="" muted loop class="best_pf_vid cover"></video>
+										<video src="" muted autoplay playsinline loop class="best_pf_vid cover"></video>
 									</a>
 								</div>
 							</div>
@@ -330,18 +329,7 @@
 					</div>
 					<div class="year p_center pt">
 						<p>
-							<i>M</i>
-							<i>Y</i>
-							<i>&nbsp;</i>
-							<i>P</i>
-							<i>O</i>
-							<i>R</i>
-							<i>T</i>
-							<i>F</i>
-							<i>O</i>
-							<i>L</i>
-							<i>I</i>
-							<i>O</i>
+							<i>M</i><i>Y</i><i>&nbsp;</i><i>P</i><i>O</i><i>R</i><i>T</i><i>F</i><i>O</i><i>L</i><i>I</i><i>O</i>
 						</p>
 						<p><i>2</i><i>0</i><i>2</i><i>1</i></p>
 						<p><i>2</i><i>0</i><i>2</i><i>2</i></p>
@@ -350,13 +338,13 @@
 				</div>
 				<div class="pf_list_wrap">
 					<div class="pf_list y_2021 taR">
-						<ul class="tit_list container"></ul>
+						<ul class="tit_list btn_list container"></ul>
 					</div>
 					<div class="pf_list y_2022">
-						<ul class="tit_list container"></ul>
+						<ul class="tit_list btn_list container"></ul>
 					</div>
 					<div class="pf_list y_2023 taC">
-						<ul class="tit_list container"></ul>
+						<ul class="tit_list btn_list container"></ul>
 						<div class="window_box_wrap cover">
 							<div class="window_box vh100">
 								<div class="window_box_inner vh100">
@@ -437,7 +425,7 @@
 						</div>
 					</li>
 					<li>
-						<svg width="1361" height="527" viewBox="0 0 1361 527" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<svg viewBox="0 0 1361 527" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<rect x="1.19238" y="1.49219" width="1359" height="525" rx="14.5" stroke="#816729"/>
 						</svg>
 						<div class="inner">

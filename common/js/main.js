@@ -45,13 +45,15 @@ $(function(){
 
 
 	// INTRO OFF
-	$('.aos-init').removeClass('aos-animate');
+	var intro_ani = $('#main_visual .ani_box');
+	intro_ani.removeClass('aos-animate');
+	window.scrollTo(0,0);
 	bgm_btn.click(function(){
 		$('html,body').css({'overflow':'visible', 'height':'auto'});
 		window.scrollTo(0,0);
 		$('.main').addClass('on');
 		setTimeout(function() {
-			$('#main_visual .aos-init').addClass('aos-animate');
+			intro_ani.addClass('on');
 		}, 1500);
 	});
 
@@ -86,7 +88,7 @@ $(function(){
 					}
 				}
 				best_pf.find('.info_box .view_box').attr('href', data[index].pf_url);
-				best_pf.find('.info_box .view_box video').attr('src', `/13eom/video/best_pf${index}.mp4`);
+				best_pf.find('.info_box .view_box video').attr('src', `/video/best_pf${index}.mp4`);
 			}
 
 			// BEST PF : LIST
@@ -347,5 +349,4 @@ $(function(){
 			}
 		})
 	});
-
 });

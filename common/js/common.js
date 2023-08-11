@@ -87,8 +87,9 @@ $(function(){
 	$('header .all_menu_btn').click(function(){
 		$('header').toggleClass('on');
 	});
-	$('header #gnb > ul ul li a, .contact_btn').click(function(){
-		$('header, #contact').removeClass('on');
+	$('.contact_btn').click(function(){
+		$('header').removeClass('on');
+		$('header, #contact').toggleClass('active');
 	});
 
 	/**************** WH & BH HEADER ****************/
@@ -146,11 +147,6 @@ $(function(){
 		$('.swiper_m > ul').removeClass('swiper-wrapper');
 		$('.swiper_m > ul > li').removeClass('swiper-slide');
 	}
-
-	/**************** BROWSER WIDTH ****************/
-	$('.contact_btn').click(function(){
-		$('#contact').toggleClass('on');
-	});
 	
 	/**************** BROWSER WIDTH ****************/
 	var width = $(window).width();
