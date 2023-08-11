@@ -40,7 +40,7 @@ $(function(){
 			
 			if (st > lastScrollTop && st > navbarHeight){
 				// Scroll Down
-				if($('header').hasClass('active') && $('header').hasClass('on')){
+				if($('header').hasClass('active on')){
 				
 				}else{
 					$('header').removeClass('nav-up').addClass('nav-down');
