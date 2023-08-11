@@ -40,12 +40,9 @@ $(function(){
 			
 			if (st > lastScrollTop && st > navbarHeight){
 				// Scroll Down
-				if($('header').hasClass('active on')){
-				
-				}else{
-					$('header').removeClass('nav-up').addClass('nav-down');
-				}
-				
+				if($('header').hasClass('active')){
+				}else if($('header').hasClass('on')){
+				}else{ $('header').removeClass('nav-up').addClass('nav-down');}
 			} else {
 				// Scroll Up
 				if(st + $(window).height() < $(document).height()) {
