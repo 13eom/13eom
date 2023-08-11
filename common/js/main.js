@@ -88,7 +88,7 @@ $(function(){
 					}
 				}
 				best_pf.find('.info_box .view_box').attr('href', data[index].pf_url);
-				best_pf.find('.info_box .view_box video').attr('src', `/video/best_pf${index}.mp4`);
+				best_pf.find('.info_box .view_box video').attr('src', `/13eom/video/best_pf${index}.mp4`);
 			}
 
 			// BEST PF : LIST
