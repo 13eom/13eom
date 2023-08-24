@@ -155,9 +155,78 @@ $(function(){
 				});
 			});
 
+			/************ ALL PORTFOLIO : GSAP ************/
+			
+			$('#pf_view .close').on("click",function() {
+				pf_view.removeClass('on');
+				// $('.cursor').removeClass('visit');
+			});
+		
+			$('.view_box').on({
+				mouseenter: function(){
+					$('.cursor').addClass('visit_on');
+				}
+				,mouseleave: function(){
+					$('.cursor').removeClass('visit_on');
+				}
+			});
+			if(pc.matches == false){
+				$(window).scroll(function(){
+					pf_view.removeClass('on');
+				});
+			}
+		
+			for(i=0; i<pf_list.length; i++){
+				let all_pf_year = gsap.timeline({
+					scrollTrigger: { 
+						trigger: pf_list[i],
+						start: "top bottom",
+						end: 1,
+						scrub: true,
+					},
+				});
+		
+				all_pf_year
+				.to('#main_all_pf .sticky_box',{className:`sticky_box vh100 scene${[i]}`, duration: 0.5},)
+			}
+		
+			$('#main_all_pf .pf_list_wrap .pf_list ul.tit_list li p').each(function(){
+				var pf_tit = $(this).clone();
+				$(this).parent().append(pf_tit);
+			});
+		
+			let all_pf_progress = gsap.timeline({
+				scrollTrigger: { 
+					trigger: "#main_all_pf",
+					start: "top bottom",
+					end: "100% bottom",
+					scrub: true,
+				},
+			});
+		
+			all_pf_progress
+			.to( "#main_all_pf .sticky_box .bird_progress i",.3,{ top: "-20%"},)
+		
+			let all_pf_window = gsap.timeline({
+				scrollTrigger: { 
+					trigger: ".window_box_wrap",
+					start: "top bottom",
+					end: "100% bottom",
+					scrub: true,
+				},
+			});
+			all_pf_window.staggerFromTo(".window_box_wrap .img_wrap li", 2, {y:"100%", opacity:0,}, {y: "0", opacity:1,}, .5)
+			.to( ".main #main_all_pf .bg .sticky_box .info",1,{ opacity:0, y: "100%"},'scene2')
+			.to( ".window_box_wrap .window_box .img_wrap",1.5,{ width: "100%", height:"100%",},'scene2')
+			.to( ".window_box_wrap .window_box .img_wrap li.img1",1.5,{ y:"-60rem",},'scene2')
+			.to( ".window_box_wrap .window_box .img_wrap li.img2",1.5,{ x:"-60rem",},'scene2')
+			.to( ".window_box_wrap .window_box .img_wrap li.img3",1.5,{ x:"60rem",},'scene2')
+			.to( ".window_box_wrap .window_box .img_wrap li.img4, .window_box_wrap .window_box .img_wrap li.img5",1.5,{ y:"60rem",},'scene2')
+			.to( ".window_box_wrap .window_box .img_wrap li img",2,{ scale:1,},'scene2')
+
 		},
 		error : function() {
-			alert('error!');
+			alert('웹사이트 수정 중 입니다.');
 		}
 	});
 
@@ -242,75 +311,6 @@ $(function(){
 
 	values
 	.to( "#main_value",.3,{ paddingLeft:"0", paddingRight: "0"},'scene1')
-
-	/************ ALL PORTFOLIO ************/
-	
-	$('#pf_view .close').on("click",function() {
-		pf_view.removeClass('on');
-		// $('.cursor').removeClass('visit');
-	});
-
-	$('.view_box').on({
-		mouseenter: function(){
-			$('.cursor').addClass('visit_on');
-		}
-		,mouseleave: function(){
-			$('.cursor').removeClass('visit_on');
-		}
-	});
-	if(pc.matches == false){
-		$(window).scroll(function(){
-			pf_view.removeClass('on');
-		});
-	}
-
-	for(i=0; i<pf_list.length; i++){
-		let all_pf_year = gsap.timeline({
-			scrollTrigger: { 
-				trigger: pf_list[i],
-				start: "top bottom",
-				end: 1,
-				scrub: true,
-			},
-		});
-
-		all_pf_year
-		.to('#main_all_pf .sticky_box',{className:`sticky_box vh100 scene${[i]}`, duration: 0.5},)
-	}
-
-	$('#main_all_pf .pf_list_wrap .pf_list ul.tit_list li p').each(function(){
-		var pf_tit = $(this).clone();
-		$(this).parent().append(pf_tit);
-	});
-
-	let all_pf_progress = gsap.timeline({
-		scrollTrigger: { 
-			trigger: "#main_all_pf",
-			start: "top bottom",
-			end: "100% bottom",
-			scrub: true,
-		},
-	});
-
-	all_pf_progress
-	.to( "#main_all_pf .sticky_box .bird_progress i",.3,{ top: "-20%"},)
-
-	let all_pf_window = gsap.timeline({
-		scrollTrigger: { 
-			trigger: ".window_box_wrap",
-			start: "top bottom",
-			end: "100% bottom",
-			scrub: true,
-		},
-	});
-	all_pf_window.staggerFromTo(".window_box_wrap .img_wrap li", 2, {y:"100%", opacity:0,}, {y: "0", opacity:1,}, .5)
-	.to( ".main #main_all_pf .bg .sticky_box .info",1,{ opacity:0, y: "100%"},'scene2')
-	.to( ".window_box_wrap .window_box .img_wrap",1.5,{ width: "100%", height:"100%",},'scene2')
-	.to( ".window_box_wrap .window_box .img_wrap li.img1",1.5,{ y:"-60rem",},'scene2')
-	.to( ".window_box_wrap .window_box .img_wrap li.img2",1.5,{ x:"-60rem",},'scene2')
-	.to( ".window_box_wrap .window_box .img_wrap li.img3",1.5,{ x:"60rem",},'scene2')
-	.to( ".window_box_wrap .window_box .img_wrap li.img4, .window_box_wrap .window_box .img_wrap li.img5",1.5,{ y:"60rem",},'scene2')
-	.to( ".window_box_wrap .window_box .img_wrap li img",2,{ scale:1,},'scene2')
 
 	/************ ABOUT ME ************/
 	let about_cross = gsap.timeline({
