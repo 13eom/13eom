@@ -10,8 +10,8 @@
 	<meta itemprop="description" content="[미완성] 이승범의 포트폴리오 입니다.">
 	<link rel="stylesheet" href="./common/css/common.css">
 	<link rel="shortcut icon" href="./favicon.ico">
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+	<script src="./common/js/jquery.min.js"></script>
+	<script src="./common/js/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="./common/js/swiper.min.js"></script>
 	<script type="text/javascript" src="./common/js/aos.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
@@ -231,6 +231,10 @@
 									</div>
 									<div class="list">
 										<strong class="pt">Portfolio list</strong>
+										<div class="pagi">
+											<span class="prv disable"></span>
+											<span class="nxt"></span>
+										</div>
 										<ul class="btn_list"></ul>
 									</div>
 								</div>
@@ -263,6 +267,7 @@
 										</li>
 									</ul>
 									<a class="view_box" href="" target="_blank">
+										<span class="loader p_center"></span>
 										<video src="" muted autoplay playsinline loop class="best_pf_vid cover"></video>
 									</a>
 								</div>
