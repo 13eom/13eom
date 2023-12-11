@@ -183,11 +183,19 @@ html,body{ overflow: hidden; height: 100%;}
 
 .main #main_best_pf .sticky_box .pf_box .inner .pf_con .list_box .txt p { font-size: 16rem; line-height: 1.4; }
 
-.main #main_best_pf .sticky_box .pf_box .inner .pf_con .list_box .list { width: 100%; margin-top: 24rem; }
+.main #main_best_pf .sticky_box .pf_box .inner .pf_con .list_box .list { width: 100%; margin-top: 24rem; position: relative;}
 
 .main #main_best_pf .sticky_box .pf_box .inner .pf_con .list_box .list strong { display: block; color: #ff682c; font-weight: 600; margin-bottom: 14rem; }
 
-.main #main_best_pf .sticky_box .pf_box .inner .pf_con .list_box .list ul { border: 1px solid #ff682c; background-color: #401D19; border-radius: 15rem; padding: 10rem; height: 333rem; }
+.main #main_best_pf .sticky_box .pf_box .inner .pf_con .list_box .list .pagi{ display: flex; position: absolute; right: 0; top: 0;}
+
+.main #main_best_pf .sticky_box .pf_box .inner .pf_con .list_box .list .pagi span{ width: 18rem; height: 18rem; border-radius: 50%; background:#512520 url(../../images/common/arrow.svg) no-repeat center center/10rem auto; margin-left: 6rem; cursor: pointer;}
+
+.main #main_best_pf .sticky_box .pf_box .inner .pf_con .list_box .list .pagi span.prv{ transform: rotate(180deg);}
+
+.main #main_best_pf .sticky_box .pf_box .inner .pf_con .list_box .list .pagi span.disable{ opacity: .5; cursor: default;}
+
+.main #main_best_pf .sticky_box .pf_box .inner .pf_con .list_box .list ul { border: 1px solid #ff682c; background-color: #401D19; border-radius: 15rem; padding: 10rem; height: 333rem; overflow: hidden; overflow-y: auto;}
 
 .main #main_best_pf .sticky_box .pf_box .inner .pf_con .list_box .list ul li { width: 100%; height: calc(100%/7 - 8.7rem); background-color: #512520; padding: 10rem; border-radius: 10rem; position: relative; cursor: pointer; transition: 0.5s cubic-bezier(0.16, 1, 0.3, 1); }
 
@@ -220,10 +228,25 @@ html,body{ overflow: hidden; height: 100%;}
 .main #main_best_pf .sticky_box .pf_box .inner .pf_con .info_box .info_list li .detail p + p { margin-top: 10rem; color: #ff682c; }
 
 .main #main_best_pf .sticky_box .pf_box .inner .pf_con .info_box .view_box { height: 333rem; flex-shrink: 0; border-radius: 15rem; background-color: #512520; margin-top: 10rem; overflow: hidden; position: relative; }
+.main #main_best_pf .sticky_box .pf_box .inner .pf_con .info_box .view_box .loader { width: 48px; height: 48px; border-radius: 50%; position: absolute; left: 50%; top:50%; transform: translate(-50%,-50%); animation: loading1 1s linear infinite}
+.main #main_best_pf .sticky_box .pf_box .inner .pf_con .info_box .view_box .loader::before,
+.main #main_best_pf .sticky_box .pf_box .inner .pf_con .info_box .view_box .loader::after{ content: ""; box-sizing: border-box; position: absolute; inset: 0px; border-radius: 50%; border: 5px solid #EDD0C6; animation: loading2 2s linear infinite alternate-reverse;}
+.main #main_best_pf .sticky_box .pf_box .inner .pf_con .info_box .view_box .loader::after{ transform: rotate3d(90, 90, 0, 180deg ); border-color: #ff682c;}
+
+@keyframes loading1 {
+  0%   {transform: translate(-50%,-50%) rotate(0deg);}
+  100%   {transform: translate(-50%,-50%) rotate(360deg);}
+}
+
+@keyframes loading2 {
+    0%   {clip-path:polygon(50% 50%,0 0,0 0,0 0,0 0,0 0)}
+    50%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 0,100% 0,100% 0)}
+    90%, 100%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,100% 100%,100% 100%)}
+}
 
 .main #main_best_pf .sticky_box .pf_box .inner .pf_con .info_box .view_box::after { content: ''; display: block; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -20%); background: url(../../images/common/link.svg) no-repeat center center/35% auto; width: 40rem; height: 40rem; border-radius: 50%; border: 1px solid #ff682c; z-index: 1; opacity: 0; transition: 1s cubic-bezier(0.16, 1, 0.3, 1); }
 
-.main #main_best_pf .sticky_box .pf_box .inner .pf_con .info_box .view_box video { transition: 1s cubic-bezier(0.16, 1, 0.3, 1); }
+.main #main_best_pf .sticky_box .pf_box .inner .pf_con .info_box .view_box video { transition: 1s cubic-bezier(0.16, 1, 0.3, 1); z-index: 5;}
 
 .main #main_best_pf .sticky_box .pf_box .inner .pf_con .info_box .view_box:hover::after { transform: translate(-50%, -50%); opacity: 1; }
 
@@ -643,6 +666,7 @@ html,body{ overflow: hidden; height: 100%;}
   .main #main_best_pf .sticky_box .pf_box .inner .pf_con .list_box .txt .tit { font-size: 30rem; margin-bottom: 18rem; line-height: 1.2; }
   .main #main_best_pf .sticky_box .pf_box .inner .pf_con .list_box .txt .tit span { display: block; }
   .main #main_best_pf .sticky_box .pf_box .inner .pf_con .list_box .txt p { font-size: 14rem; }
+  .main #main_best_pf .sticky_box .pf_box .inner .pf_con .list_box .list .pagi{ top: -2rem;}
   .main #main_best_pf .sticky_box .pf_box .inner .pf_con .list_box .list strong { margin-bottom: 10rem; }
   .main #main_best_pf .sticky_box .pf_box .inner .pf_con .list_box .list ul { border-radius: 10rem; height: auto; }
   .main #main_best_pf .sticky_box .pf_box .inner .pf_con .list_box .list ul li { height: auto; padding: 8rem 10rem; border-radius: 5rem; }
