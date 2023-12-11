@@ -120,6 +120,18 @@ $(function(){
 			best_pf.find('.list_box .list ul li').eq(0).addClass('on');
 			best_pf_var(best_pf_leng[0]);
 
+			// BEST PF : PAGINATION
+			best_pf.find('.list_box .list .pagi span').click(function(){
+				$(this).addClass('disable').siblings().removeClass('disable');
+				if($(this).hasClass('prv')){
+					best_pf.find('.list_box .list .btn_list').scrollTop(0);
+					console.log('a');
+				}else if($(this).hasClass('nxt')){
+					best_pf.find('.list_box .list .btn_list').scrollTop(5000);
+					console.log('b');
+				}
+			});
+			
 			/******* ALL PORTFOLIO *******/
 			pf_list_w.each(function(i,e){
 				for(idx=0; idx<data.length; idx++){
