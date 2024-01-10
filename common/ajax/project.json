@@ -352,5 +352,25 @@
     "about": "WITHU is a subsidiary-type standard workplace for the disabled established by LG U+ to expand employment of the disabled. This is a website certified for web accessibility.",
     "pf_url": "https://withuplus.co.kr/",
     "best": true
+  },
+  {
+    "name": "Suntech International",
+    "date_y": "2023",
+    "date_m": "11",
+    "period": "7",
+    "contribution": "100%",
+    "about": "Suntech International is a developer, manufacturer, and global distributor of IoT telematics hardware.",
+    "pf_url": "http://suntechint.com/",
+    "best": true
+  },
+  {
+    "name": "P FLOW",
+    "date_y": "2023",
+    "date_m": "12",
+    "period": "8",
+    "contribution": "100%",
+    "about": "P FLOW is collaborating with group companies engaged in various businesses such as port stevedoring/silo/financial investment. Based on our specialized field knowledge and capital, we provide TOTAL services, including logistics development financing, to all of our customers.",
+    "pf_url": "http://www.fine-asset.co.kr/",
+    "best": true
   }
 ]
