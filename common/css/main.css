@@ -572,7 +572,7 @@ html, body { overflow: hidden; height: 100%; }
   .main #main_best_pf .sticky_box .pf_box .inner .pf_con .list_box .txt .tit span { display: block; }
   .main #main_best_pf .sticky_box .pf_box .inner .pf_con .list_box .txt p { font-size: 14rem; }
   .main #main_best_pf .sticky_box .pf_box .inner .pf_con .list_box .list strong { margin-bottom: 10rem; }
-  .main #main_best_pf .sticky_box .pf_box .inner .pf_con .list_box .list ul { border-radius: 10rem; height: auto; }
+  .main #main_best_pf .sticky_box .pf_box .inner .pf_con .list_box .list ul { border-radius: 10rem; height: 259rem; }
   .main #main_best_pf .sticky_box .pf_box .inner .pf_con .list_box .list ul li { height: auto; padding: 8rem 10rem; border-radius: 5rem; }
   .main #main_best_pf .sticky_box .pf_box .inner .pf_con .list_box .list ul li + li { margin-top: 4rem; }
   .main #main_best_pf .sticky_box .pf_box .inner .pf_con .list_box .list ul li span { font-size: 10rem; }
