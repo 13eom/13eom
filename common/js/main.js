@@ -124,10 +124,10 @@ $(function(){
 			best_pf.find('.list_box .list .pagi span').click(function(){
 				$(this).addClass('disable').siblings().removeClass('disable');
 				if($(this).hasClass('prv')){
-					best_pf.find('.list_box .list .btn_list').scrollTop(0);
+					best_pf.find('.list_box .list .btn_list').animate({scrollTop: '0'}, 1000);
 					console.log('a');
 				}else if($(this).hasClass('nxt')){
-					best_pf.find('.list_box .list .btn_list').scrollTop(5000);
+					best_pf.find('.list_box .list .btn_list').animate({scrollTop: '500'}, 1000);
 					console.log('b');
 				}
 			});
