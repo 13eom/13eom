@@ -244,7 +244,7 @@ html,body{ overflow: hidden; height: 100%;}
     90%, 100%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,100% 100%,100% 100%)}
 }
 
-.main #main_best_pf .sticky_box .pf_box .inner .pf_con .info_box .view_box::after { content: ''; display: block; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -20%); background: url(../../images/common/link.svg) no-repeat center center/35% auto; width: 40rem; height: 40rem; border-radius: 50%; border: 1px solid #ff682c; z-index: 1; opacity: 0; transition: 1s cubic-bezier(0.16, 1, 0.3, 1); }
+.main #main_best_pf .sticky_box .pf_box .inner .pf_con .info_box .view_box::after { content: ''; display: block; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -20%); background: url(../../images/common/link.svg) no-repeat center center/35% auto; width: 40rem; height: 40rem; border-radius: 50%; border: 1px solid #ff682c; z-index: 5; opacity: 0; transition: 1s cubic-bezier(0.16, 1, 0.3, 1); }
 
 .main #main_best_pf .sticky_box .pf_box .inner .pf_con .info_box .view_box video { transition: 1s cubic-bezier(0.16, 1, 0.3, 1); z-index: 5;}
 
