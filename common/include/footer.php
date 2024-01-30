@@ -48,11 +48,3 @@
     </div>
   </div>
 </footer>
-<script>
-  $(function(){
-    ScrollTrigger.update();
-    $(window).scroll(function(){
-      AOS.refresh();
-    });
-  });
-</script>
