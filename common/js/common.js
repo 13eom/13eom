@@ -178,6 +178,10 @@ $(function(){
 
 	/**************** AOS ****************/
 	AOS.init({duration: 700, offset: 200, easing: 'cubic-bezier(0.25, 1, 0.5, 1);'});
+	setInterval(function(){ 
+		ScrollTrigger.update();
+		AOS.refresh();
+	}, 2000);
 	
 	/**************** SMOOTH SCROLL ****************/
 	const lenis = new Lenis({
@@ -192,16 +196,17 @@ $(function(){
 	}
 	
 	requestAnimationFrame(raf)
+
+	/**************** IMG RESIZING ****************/
+	$(window).on('load', function(){
+		var allRemImg = $('.remImg');
+		allRemImg.hide();
+		for(i=0; i<allRemImg.length; i++){
+			var remImg = allRemImg.eq(i);
+			var remImgWidth= remImg[0].naturalWidth;
+			remImg.css({'width' : remImgWidth + 'rem', 'display' : 'block'});
+			allRemImg.show();
+		}
+	});
 });
 
-/**************** IMG RESIZING ****************/
-$(window).on('load', function(){
-	var allRemImg = $('.remImg');
-	allRemImg.hide();
-	for(i=0; i<allRemImg.length; i++){
-		var remImg = allRemImg.eq(i);
-		var remImgWidth= remImg[0].naturalWidth;
-		remImg.css({'width' : remImgWidth + 'rem', 'display' : 'block'});
-		allRemImg.show();
-	}
-});
