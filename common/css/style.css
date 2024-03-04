@@ -195,7 +195,7 @@ html,body{ overflow: hidden; height: 100%;}
 
 .main #main_best_pf .sticky_box .pf_box .inner .pf_con .list_box .list .pagi span.disable{ opacity: .5; cursor: default;}
 
-.main #main_best_pf .sticky_box .pf_box .inner .pf_con .list_box .list ul { border: 1px solid #ff682c; background-color: #401D19; border-radius: 15rem; padding: 10rem; height: 333rem; overflow: hidden; overflow-y: auto;}
+.main #main_best_pf .sticky_box .pf_box .inner .pf_con .list_box .list ul { border: 1px solid #ff682c; background-color: #401D19; border-radius: 15rem; padding: 10rem; height: 333rem; overflow: hidden;}
 
 .main #main_best_pf .sticky_box .pf_box .inner .pf_con .list_box .list ul li { width: 100%; height: calc(100%/7 - 8.7rem); background-color: #512520; padding: 10rem; border-radius: 10rem; position: relative; cursor: pointer; transition: 0.5s cubic-bezier(0.16, 1, 0.3, 1); }
 
