@@ -320,6 +320,7 @@
     "date_m": "3",
     "period": "6",
     "contribution": "100%",
+    "awards": ["GDWEB Awards"],
     "about": "Soft Squared is no practical experience For computer science students With practical infrastructure such as outsourcing, app launching, and entrepreneurship We provide hands-on experience and the benefits that come with it.",
     "pf_url": "https://neordinary.co.kr/",
     "best": true
@@ -379,6 +380,7 @@
     "date_m": "12",
     "period": "4",
     "contribution": "100%",
+    "awards": ["GDWEB Awards"],    
     "about": "REMO provides the simplest healthcare service with vision AI technology. I worked with natural and delicate interactions.",
     "pf_url": "https://www.remo.re.kr/",
     "best": true
