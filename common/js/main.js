@@ -18,7 +18,7 @@ $(function(){
 			cnt.innerText = cnt_num;
 			$('#intro .circle_box .bg').css('transform', `scale(${cnt_num}%)`);
 		}
-	},50);
+	},20);
 
 	// BGM BUTTON
 	var bgm_btn = $("#intro .sound_btn_wrap button");
