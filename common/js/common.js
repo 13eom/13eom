@@ -94,7 +94,7 @@ $(function(){
 		$('#contact').addClass('active');
 	});
 	
-	$('#gnb > ul > li:first-child a').click(function(){
+	$('#gnb > ul > li:first-child > ul > li > a').click(function(){
 		$('header, #contact').removeClass('active on');
 	});
 
