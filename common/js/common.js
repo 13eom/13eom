@@ -90,6 +90,10 @@ $(function(){
 		$('header, #contact').toggleClass('active');
 	});
 
+	$('header #gnb > ul > li > a.contact_btn').click(function(){
+		$('#contact').addClass('active');
+	});
+	
 	$('#gnb > ul > li:first-child a').click(function(){
 		$('header, #contact').removeClass('active on');
 	});
