@@ -384,5 +384,25 @@
     "about": "REMO provides the simplest healthcare service with vision AI technology. I worked with natural and delicate interactions.",
     "pf_url": "https://www.remo.re.kr/",
     "best": true
+  },
+    {
+    "name": "LG Electronics : Useful tip",
+    "date_y": "2024",
+    "date_m": "6",
+    "period": "4",
+    "contribution": "100%",    
+    "about": "It is designed to implement diagnostic tests to help you find the most suitable laundry solution.",
+    "pf_url": "https://www.lge.co.kr/story/useful-tip/lg-washtower-washcombo",
+    "best": true
+  },
+    {
+    "name": "Newnal",
+    "date_y": "2024",
+    "date_m": "12",
+    "period": "6",
+    "contribution": "100%",    
+    "about": "NewNal is an AI-based digital platform. It implements three-dimensional interaction using image transition scroll animation.",
+    "pf_url": "https://www.newnal.com/",
+    "best": true
   }
 ]
