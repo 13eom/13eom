@@ -233,6 +233,18 @@ header:not(.nav-down) #gnb > ul > li:hover ul li:nth-child(9) { transition-delay
 
 header:not(.nav-down) #gnb > ul > li:hover ul li:nth-child(10) { transition-delay: 1.1s; }
 
+header:not(.nav-down) #gnb > ul > li:hover ul li:nth-child(11) { transition-delay: 1.2s; }
+
+header:not(.nav-down) #gnb > ul > li:hover ul li:nth-child(12) { transition-delay: 1.3s; }
+
+header:not(.nav-down) #gnb > ul > li:hover ul li:nth-child(13) { transition-delay: 1.4s; }
+
+header:not(.nav-down) #gnb > ul > li:hover ul li:nth-child(14) { transition-delay: 1.5s; }
+
+header:not(.nav-down) #gnb > ul > li:hover ul li:nth-child(15) { transition-delay: 1.6s; }
+
+header:not(.nav-down) #gnb > ul > li:hover ul li:nth-child(16) { transition-delay: 1.7s; }
+
 header .bgm_btn { width: 142rem; padding: 10rem; text-align: center; background-color: #863B32; border-radius: 999rem; overflow: hidden; position: relative; }
 
 header .bgm_btn::before { content: 'click to pause'; position: relative; z-index: 1; }
